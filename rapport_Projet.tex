@@ -27,8 +27,135 @@
 
 \renewcommand{\contentsname}{Sommaire}
 \tableofcontents
+\part{Présentation}
+\section{Présentation du Projet  :}
+Projet en groupe de deux élèves pour valider la 4ème année de master Informatique à l'ulco.
+\newline
+\newline
+ Thème du projet : Modélisation et simulation de la formation de coalitions par la théorie des jeux
+\newline
+\newline
+Théorie des jeux : Permet d'analyser des situations réelles et de trouver la stratégie optimale que les agents peuvent effectuer pour maximiser leur gain.
+Cette théorie peut être appliquée a de multiples contextes telle que le contexte économique ou encore sociale afin d'analyser une société par exemple.
+\newline
 
-
-
+\section{Introduction  :}
+	le système multi-agents est un système composé d'agents autonomes , qui peuvent s'organiser pour former des coalitions afin de maximiser leur gain ainsi que celui de leur coalition. 
+	\newline
+	\newline
+	Dans ce contexte nous présentons un modèle de simulation à base d'agents , adaptés pour simuler un scénario de la formation de coalitions, Cette analyse est effectuée au moyen d'une simulation multi-agents, dont l'environnement se compose d'une population d'agents positionnés dans un réseau carré en deux dimensions. 
+	\newline
+	\newline
+	 Chaque agent interagit avec ses voisins sous forme de parties, en choisissant soit  de faire la défection soit de coopérer. Ces agents peuvent décider de jouer de façon indépendante, ou ils peuvent décider de rejoindre ou de quitter une coalition. 
+	 \newline
+	 \newline
+	La décision de rester ou de quitter une coalition est largement basée sur le gain obtenu par l'agent par rapport au gain obtenu par ses voisins.
+	\newline
+\part{système spatial}
+\section{Répartition spatiale :}
+	nous considérons un réseau carré à deux dimensions, constitué de N nœuds, et que chaque agent de la cellule Ai peut seulement interagir avec les cellules de son voisinage , dont la taille peut être augmentée ou diminuée en fonction du NR ( neighbourhood ratio ) qui permet de connaître le nombre d'agents avec lesquels un agent interagit à chaque tour de jeu. 
+	\newline
+	\newline
+	Le plus petit NR possible est de 1 et représente les 4 voisins directs de l'agent ( en haut , en bas , à gauche et à droite). 
+	\newline
+	\newline
+	Le NR s'incrémente par tranche de 0,5. plus le NR est élevé, plus l'agent rencontrera un grand nombre d'agents à chaque tour, ainsi si le NR est de 1.5, il rencontrera les 4 agents présents à NR=1 + les 4 agents en diagonale . 
+	\newline
+	\newline
+	Le NR peut être assimilé au rayon mathématique, plus il est grand et plus le cercle partant de l'agent atteint un grand nombre d'autres agents.
+	\newline
+\section{états des agents :}
+	Les agents peuvent être définis comme étant dans différents états.
+	\newline
+	\newline
+Tout d'abord il y a les agents indépendants et les agents en coalition.
+\newline
+	\newline
+Les agents en coalition font parti d'un groupe d'agent qui utilisent la même stratégie. Cette stratégie est définie par le leader de la coalition.
+\newline
+	\newline
+Les membres de la coalitions peuvent être soit isolé, soit non isolé, ils sont considérés comme isolés si aucun de leur voisin ne fait parti de leur coalition.
+\newline
+\section{Règles du jeu :}
+Chaque cellule de notre distribution spatiale est dirigée par un agent qui suivra l'une des deux stratégies de base : la défection D ou la coopération C ,est en interaction avec un autre agent de son voisinage qui doit choisir aussi D ou C, le choix effectué par chaque agent est inconnu par l'agent adverse. A la fin du tour et après que le choix des deux agents est connu, un gain  est donné à chaque agent , ce gain est définie dans la matrice de payoff.
+	\newline
+	\newline
+	Le modèle de simulation présenté dans notre contexte est le modèle de jeu du dilemme du prisonnier spatiale .
+	\newline
+	\newline
+	Les analyses montrent que la défection est une stratégie dite stable évolutionnaire dans le dilemme de prisonnier "one-shot".
+	\newline
+	\newline
+	Si les agents ne regardent que leur propre intérêt personnel, il est préférable pour eux de défécter alors que si on regarde en terme de gain cumulé par l'ensemble des agents, il est plus bénéfique de coopérer. 
+	\newline
+\part{Les coalitions}
+Ai et Aj suivent des règles simples pour prendre des  décisions concernant la formation de la coalition . Les coalitions ont une structure organisationnelle à deux niveaux. Un des membres de la coalition mène le groupe  est appelé le chef de la Coalition « Leader »,  tandis que les autres membres sont appelés « Coalition Part», En outre, si un agent ne fait pas partie d'une coalition, il est considéré comme indépendant.
+\newline
+\newline
+$\Rightarrow$
+  Indépendant: Le propriétaire peut soit agir comme un C ou D  à l'égard de ses voisins, Après chaque jeu, il peut joindre à une coalition ou de rester indépendant.  Les stratégies des agent sont fixes et fixées au début de chaque tour. Dans ce travail, la stratégie possible est le probabilistic Tit-for-tat (pTFT) expliqué plus bas.
+\newline
+\newline
+$\Rightarrow$
+  Coalition Part :  L'agent coopère toujours avec les voisins appartenant à sa coalition et prend sa décision de coopération ou de défection pour les voisins indépendant par rapport à la décision prise par le leader de la coalition. En fonction du résultat obtenu à la fin du tour , il peut devenir agent indépendant si son compromis avec son leader est inférieur à un certain seuil ou si il n'est pas le meilleur de son voisinnage.
+\newline
+\newline
+$\Rightarrow$
+  Leader :  agit comme ses parties le leader. Décide la stratégie commune pour le prochain tour , impose également un pourcentage de l'impôt à la récompense des agents «Coalition Part» à chaque itération, car il représente la coalition tout entière au cours de la procédure de négociation avec l'État, Ne peut pas décider de devenir indépendant à tout moment: il peut prendre cette décision seulement quand il n'y a pas de « Coalition part » à la coalition qu'il dirige. 
+  \newline
+\part{Les stratégies}
+Les différentes stratégies applicables sont les suivantes : 
+\newline
+\section{probabilistic Tit-for-tat (pTFT) :}
+Le pTFT est une stratégie se basant sur l'imitation de la stratégie de nos voisins.
+\newline
+\newline
+Il permet de reproduire l'action la plus effectuée dans notre voisinage en comptant le nombre de défections/ nombre de voisins sur le tour précédent.
+\newline
+\newline
+Ainsi, si ¼ des voisins a coopérer au tour t-1, alors nous aurons  ¼  de chances de coopérer au tour t.
+\newline
+\part{Implémentation sous netLogo}
+\section{Analyse Algorithme :}
+\vspace{10 mm}
+globals : MatricePayoff, MatriceCompromis
+\newline
+\newline
+patches-own :  
+\newline
+leader? 
+\newline
+numCoalition
+\newline
+independant?
+\newline
+payOff
+\newline
+Taxe
+\newline
+\newline
+setup : 
+\newline
+InitialiserMatricePayOff
+\newline
+CreerPatches
+\newline
+Chaque tour : 
+\newline
+ReinitialiserPayOffs
+\newline
+DemanderStrategieALeader
+\newline
+Jouer
+\newline
+MetterAJ
+\newline
+ourCoalition
+\newline
+Fonction a créer : ReinitialiserTaxe
+\newline
+Jouer -> pour chaque joueur , regarde sa stratégie et celle de ses voisins, regarde dans la matrice des payoff la ligne correspondante et l'ajoute au payOff
+\newline
+MetteAJourCoalition
 
 \end{document}
