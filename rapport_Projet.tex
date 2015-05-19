@@ -29,14 +29,14 @@
 \tableofcontents
 \part{Présentation}
 \section{Présentation du Projet  :}
-Projet en groupe de deux élèves pour valider la 4ème année de master Informatique à l'ulco.
+Projet en binôme pour valider la 4ème année de master Informatique à l'ulco.
 \newline
 \newline
  Thème du projet : Modélisation et simulation de la formation de coalitions par la théorie des jeux
 \newline
 \newline
-Théorie des jeux : Permet d'analyser des situations réelles et de trouver la stratégie optimale que les agents peuvent effectuer pour maximiser leur gain.
-Cette théorie peut être appliquée a de multiples contextes telle que le contexte économique ou encore sociale afin d'analyser une société par exemple.
+Théorie des jeux : Permet d'analyser des situations réelles et de trouver la stratégie optimale que les agents peuvent adopter pour maximiser leur gain.
+Cette théorie peut être appliquée a de multiples contextes tel que le contexte économique ou encore social afin d'analyser une société par exemple.
 \newline
 
 \section{Introduction  :}
@@ -71,13 +71,13 @@ Cette théorie peut être appliquée a de multiples contextes telle que le conte
 Tout d'abord il y a les agents indépendants et les agents en coalition.
 \newline
 	\newline
-Les agents en coalition font parti d'un groupe d'agent qui utilisent la même stratégie. Cette stratégie est définie par le leader de la coalition.
+Les agents en coalition font partie d'un groupe d'agents qui utilisent la même stratégie. Cette stratégie est définie par le leader de la coalition.
 \newline
 	\newline
-Les membres de la coalitions peuvent être soit isolé, soit non isolé, ils sont considérés comme isolés si aucun de leur voisin ne fait parti de leur coalition.
+Les membres de la coalitions peuvent être soit isolés, soit non isolé, ils sont considérés comme isolés si aucun de leur voisin ne fait parti de leur coalition.
 \newline
 \section{Règles du jeu :}
-Chaque cellule de notre distribution spatiale est dirigée par un agent qui suivra l'une des deux stratégies de base : la défection D ou la coopération C ,est en interaction avec un autre agent de son voisinage qui doit choisir aussi D ou C, le choix effectué par chaque agent est inconnu par l'agent adverse. A la fin du tour et après que le choix des deux agents est connu, un gain  est donné à chaque agent , ce gain est définie dans la matrice de payoff.
+Chaque cellule de notre distribution spatiale est dirigée par un agent qui suivra l'une des deux stratégies de base : la défection D ou la coopération C ,est en interaction avec un autre agent de son voisinage qui doit choisir aussi D ou C, le choix effectué par chaque agent est inconnu par l'agent adverse. A la fin du tour et une fois le choix des deux agents est connu, un gain  est attribué à chaque agent , ce gain est défini dans la matrice de payoff.
 	\newline
 	\newline
 	Le modèle de simulation présenté dans notre contexte est le modèle de jeu du dilemme du prisonnier spatiale .
@@ -93,11 +93,11 @@ Ai et Aj suivent des règles simples pour prendre des  décisions concernant la 
 \newline
 \newline
 $\Rightarrow$
-  Indépendant: Le propriétaire peut soit agir comme un C ou D  à l'égard de ses voisins, Après chaque jeu, il peut joindre à une coalition ou de rester indépendant.  Les stratégies des agent sont fixes et fixées au début de chaque tour. Dans ce travail, la stratégie possible est le probabilistic Tit-for-tat (pTFT) expliqué plus bas.
+  Indépendant: Le propriétaire peut soit agir comme un C ou D  à l'égard de ses voisins, Après chaque jeu, il peut se joindre à une coalition ou rester indépendant.  Les stratégies des agent sont fixes et fixées au début de chaque tour. Dans ce travail, la stratégie possible est le probabilistic Tit-for-tat (pTFT) expliqué plus bas.
 \newline
 \newline
 $\Rightarrow$
-  Coalition Part :  L'agent coopère toujours avec les voisins appartenant à sa coalition et prend sa décision de coopération ou de défection pour les voisins indépendant par rapport à la décision prise par le leader de la coalition. En fonction du résultat obtenu à la fin du tour , il peut devenir agent indépendant si son compromis avec son leader est inférieur à un certain seuil ou si il n'est pas le meilleur de son voisinnage.
+  Coalition Part :  L'agent coopère toujours avec les voisins appartenant à sa coalition et prend sa décision de coopération ou de défection envers les voisins indépendants selon la décision prise par le leader de la coalition. En fonction du résultat obtenu à la fin du tour , il peut devenir agent indépendant si son compromis avec son leader est inférieur à un certain seuil ou si il n'est pas le meilleur de son voisinage.
 \newline
 \newline
 $\Rightarrow$
