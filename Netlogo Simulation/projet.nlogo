@@ -46,7 +46,8 @@ end
 to jouer
   set leader patches with [pcolor = 133] 
   ask leader[
-    
+    set leader 1
+    ;set plabel 1
     ]
 end
 @#$#@#$#@
