@@ -1,16 +1,32 @@
 
-globals [Cooperate Defect MatricePayOff]
+globals [Cooperate Defect listcouleur MatricePayOff]
 patches-own[
-  leader]
+  leader
+  NumCoalition
+  independant
+  PayOff
+  Taxe
+  strategie]
 
 to setup
-    ca
+ca
 ask patches [
- 
-  set pcolor pink - 2
+set pcolor pink - 2  
 let voisin neighbors4
 ask voisin[
- set pcolor magenta - 2]]
+ set pcolor magenta - 2
+ ]]
+ask patches with [pcolor = 133] [
+ sprout 1 [
+   set color black
+   set shape "airplane"
+   set heading 1
+   ;set hidden? true 
+ set NumCoalition who
+ ]]
+ 
+
+
 
 ;set payoffs [[][]] pour initialiser la matrice
 set Cooperate 1
@@ -20,16 +36,7 @@ reset-ticks
 
 end
 
-to numeroter
-ask patches with [pcolor = 133] [
- sprout 1 [
-   set color pink - 4
-   set shape "airplane"
-   set heading 1
-    ]
-]
 
-end
 
 to-report compromise [Ai-color Am-color]
 let ai ifelse-value (Ai-color = magenta - 2)[1][0]
@@ -42,12 +49,19 @@ ask patches [
  jouer
   ]
 end
-
 to jouer
+
   set leader patches with [pcolor = 133] 
   ask leader[
-    set leader 1
-    ;set plabel 1
+    set leader true
+    
+    set Cooperate yellow + 1
+   set Defect turquoise - 1
+   set listcouleur( list Cooperate Defect)
+   set strategie (list Cooperate Defect)
+   let choisi one-of strategie
+   set pcolor choisi
+ 
     ]
 end
 @#$#@#$#@
@@ -79,9 +93,9 @@ ticks
 30.0
 
 BUTTON
-70
+78
 48
-143
+151
 81
 NIL
 setup
@@ -96,29 +110,12 @@ NIL
 1
 
 BUTTON
-78
-117
-141
-150
+82
+87
+145
+120
 NIL
 go
-NIL
-1
-T
-OBSERVER
-NIL
-NIL
-NIL
-NIL
-1
-
-BUTTON
-75
-219
-183
-252
-numeroter
-numeroter
 NIL
 1
 T
@@ -307,6 +304,15 @@ Circle -7500403 true true 96 51 108
 Circle -16777216 true false 113 68 74
 Polygon -10899396 true false 189 233 219 188 249 173 279 188 234 218
 Polygon -10899396 true false 180 255 150 210 105 210 75 240 135 240
+
+ghost
+false
+0
+Polygon -7500403 true true 30 165 13 164 -2 149 0 135 -2 119 0 105 15 75 30 75 58 104 43 119 43 134 58 134 73 134 88 104 73 44 78 14 103 -1 193 -1 223 29 208 89 208 119 238 134 253 119 240 105 238 89 240 75 255 60 270 60 283 74 300 90 298 104 298 119 300 135 285 135 285 150 268 164 238 179 208 164 208 194 238 209 253 224 268 239 268 269 238 299 178 299 148 284 103 269 58 284 43 299 58 269 103 254 148 254 193 254 163 239 118 209 88 179 73 179 58 164
+Line -16777216 false 189 253 215 253
+Circle -16777216 true false 102 30 30
+Polygon -16777216 true false 165 105 135 105 120 120 105 105 135 75 165 75 195 105 180 120
+Circle -16777216 true false 160 30 30
 
 house
 false
