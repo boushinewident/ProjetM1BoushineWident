@@ -1,10 +1,9 @@
 
-globals [Cooperate Defect voisin listcouleur MatricePayOff]
+globals [Cooperate Defect voisin listcouleur MatricePayOff Isolat]
 patches-own[
   leader
   NumCoalition
   independant
-  Isolat
   PayOff
   Myleaderis
   Taxe
@@ -53,7 +52,7 @@ end
 
 to commencer
   ask patches [
- starte
+ start
   ]
 end
 
@@ -64,44 +63,76 @@ to jouer
     ]
   ask leader[
    set leader true
-   set Cooperate yellow + 1
+   set Cooperate red - 1
    set Defect turquoise - 1
    set strategie (list Cooperate Defect)
    set leader one-of strategie
-   set pcolor leader]
-  ;start
-     ask leader[
-ifelse pcolor = 46[
+   set pcolor leader
+   ]  ;start   
+  
+end
+
+
+to start
+   ask leader[
+ifelse pcolor = 14[
    ask neighbors4[
  set pcolor Cooperate
      ]
    ][ask neighbors4 [
-     set pcolor Defect]]] 
-end
-
-
-to starte
-  
+     set pcolor Defect]] ]
 end
 
 to independance
     ask patches[
    set independant patches with [pcolor = magenta - 2]
   ask independant[
-    set plabel 3]]
+    set plabel 2]]
 end
+
 
 to isolated
 
   ask patches with [pcolor = turquoise - 1][
-    let particoal neighbors4
-    ask particoal[
+    let partiD neighbors4 with [pcolor = turquoise - 1]
+    ask partiD[
     ifelse pcolor = turquoise - 1[
-      set plabel 5
-      ][set plabel 0]
-     
+      set plabel 0
+     ; set Isolat 0
+      ][
+      ;set Isolat 0
+      set plabel 0
       ]
     ]
+      ]
+  ask patches with [pcolor = turquoise - 1] [
+    if plabel != 0[
+      set plabel 1
+        sprout 1[
+        set shape "x"
+        set color yellow]
+        ]
+    ]
+  ask patches with [pcolor = red - 1][
+   let partiC neighbors4 with [pcolor = red - 1]
+    ask partiC[
+    ifelse pcolor = red - 1[
+      set plabel 0
+     ; set Isolat 0
+      ][
+      ;set Isolat 0
+      set plabel 0
+      ]
+    ]
+      ]
+  ask patches with [pcolor = red - 1] [
+    if plabel != 0[
+      set plabel 1
+      sprout 1[
+        set shape "x"
+        set color yellow]]
+    ]
+
 end
 @#$#@#$#@
 GRAPHICS-WINDOW
