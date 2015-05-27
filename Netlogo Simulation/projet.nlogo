@@ -1,10 +1,12 @@
 
-globals [Cooperate Defect listcouleur MatricePayOff]
+globals [Cooperate Defect voisin listcouleur MatricePayOff]
 patches-own[
   leader
   NumCoalition
   independant
+  Isolat
   PayOff
+  Myleaderis
   Taxe
   strategie]
 
@@ -12,7 +14,7 @@ to setup
 ca
 ask patches [
 set pcolor pink - 2  
-let voisin neighbors4
+set voisin neighbors4
 ask voisin[
  set pcolor magenta - 2
  ]]
@@ -21,16 +23,15 @@ ask patches with [pcolor = 133] [
    set color black
    set shape "airplane"
    set heading 1
-   ;set hidden? true 
+   set hidden? true 
  set NumCoalition who
  ]]
+
  
-
-
-
 ;set payoffs [[][]] pour initialiser la matrice
 set Cooperate 1
 set Defect 0
+set Isolat -1
 set MatricePayOff[[0 -10][10 10]]
 reset-ticks
 
@@ -49,19 +50,57 @@ ask patches [
  jouer
   ]
 end
-to jouer
 
+to commencer
+  ask patches [
+ starte
+  ]
+end
+
+to jouer
   set leader patches with [pcolor = 133] 
+  ask patches with[pcolor =  magenta - 2][
+   set Myleaderis NumCoalition
+    ]
   ask leader[
-    set leader true
-    
-    set Cooperate yellow + 1
+   set leader true
+   set Cooperate yellow + 1
    set Defect turquoise - 1
-   set listcouleur( list Cooperate Defect)
    set strategie (list Cooperate Defect)
-   let choisi one-of strategie
-   set pcolor choisi
- 
+   set leader one-of strategie
+   set pcolor leader]
+  ;start
+     ask leader[
+ifelse pcolor = 46[
+   ask neighbors4[
+ set pcolor Cooperate
+     ]
+   ][ask neighbors4 [
+     set pcolor Defect]]] 
+end
+
+
+to starte
+  
+end
+
+to independance
+    ask patches[
+   set independant patches with [pcolor = magenta - 2]
+  ask independant[
+    set plabel 3]]
+end
+
+to isolated
+
+  ask patches with [pcolor = turquoise - 1][
+    let particoal neighbors4
+    ask particoal[
+    ifelse pcolor = turquoise - 1[
+      set plabel 5
+      ][set plabel 0]
+     
+      ]
     ]
 end
 @#$#@#$#@
@@ -116,6 +155,57 @@ BUTTON
 120
 NIL
 go
+NIL
+1
+T
+OBSERVER
+NIL
+NIL
+NIL
+NIL
+1
+
+BUTTON
+62
+124
+178
+157
+NIL
+commencer
+NIL
+1
+T
+OBSERVER
+NIL
+NIL
+NIL
+NIL
+1
+
+BUTTON
+53
+161
+188
+194
+NIL
+independance
+NIL
+1
+T
+OBSERVER
+NIL
+NIL
+NIL
+NIL
+1
+
+BUTTON
+65
+205
+160
+238
+NIL
+isolated
 NIL
 1
 T
