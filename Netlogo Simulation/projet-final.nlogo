@@ -28,6 +28,7 @@ to setupDilemme
       set shape "airplane"
       set heading 1
       ;set hidden? true 
+      set color white
       set numCoalition who
       set numAgent who
       set leader true
@@ -46,11 +47,12 @@ to setupDilemme
 end
 
 to goDilemme
+ tick
   reinitialiserPayoffs
   choisirStrategieAleatoirement
   ColorierTurtlesSelonStrategie 
   
-  
+   
   ask turtles [
     jouer
   ]
@@ -262,10 +264,10 @@ end
       
 to ColorierTurtlesSelonStrategie
   ask turtles with [strategie = 0] [
-    set color 54  
+    set color red + 3  
   ]
   ask turtles with [strategie = 1] [
-    set color blue
+    set color black
   ]
 
 end
@@ -430,7 +432,7 @@ BUTTON
 116
 go Dilemme Prisonnier
 goDilemme
-NIL
+T
 1
 T
 OBSERVER
@@ -464,7 +466,7 @@ BUTTON
 254
 Go Coalition Fixe
 GoCoalitionFixe
-NIL
+T
 1
 T
 OBSERVER
@@ -473,6 +475,43 @@ NIL
 NIL
 NIL
 1
+
+PLOT
+664
+11
+1291
+173
+Population plot
+Ticks
+Population
+0.0
+10.0
+0.0
+10.0
+true
+true
+"" ""
+PENS
+"Cooperate" 1.0 0 -1069655 true "" "plot count turtles with [color = red + 3]"
+"Defecte" 1.0 0 -16777216 true "" "plot count turtles with [color = black]"
+
+PLOT
+698
+239
+898
+389
+Taxes
+NIL
+NIL
+0.0
+10.0
+0.0
+10.0
+true
+false
+"" ""
+PENS
+"default" 1.0 0 -16777216 true "" "plot count turtles"
 
 @#$#@#$#@
 ## WHAT IS IT?
