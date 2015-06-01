@@ -1,0 +1,20 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction :}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Pr\351sentation du projet :}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.1.1}{La th\351orie des jeux \351volutionnaire et m\351m\351tique:}{section.1.1}% 3
+\BOOKMARK [2][-]{subsection.1.1.2}{Pourquoi \351tudier la formation de coalition :}{section.1.1}% 4
+\BOOKMARK [2][-]{subsection.1.1.3}{Comment faire pour \351tudier cela ? :}{section.1.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Description du mod\350le de coalition :}{}% 6
+\BOOKMARK [1][-]{section.2.1}{Syst\350me spatial :}{chapter.2}% 7
+\BOOKMARK [2][-]{subsection.2.1.1}{R\351partition spatiale :}{section.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.1.2}{r\350gles du jeu :}{section.2.1}% 9
+\BOOKMARK [1][-]{section.2.2}{Les R\364les D'agents :}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.3}{Les Coalitions :}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.4}{Les strat\351gies :}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.4.1}{probabiliste Tit-for-tat\(PTFT\) :}{section.2.4}% 13
+\BOOKMARK [2][-]{subsection.2.4.2}{Apprentissage Automates\(LA\) :}{section.2.4}% 14
+\BOOKMARK [0][-]{chapter.3}{Impl\351mentation et exp\351rimentation :}{}% 15
+\BOOKMARK [1][-]{section.3.1}{dilemme de prisonnier Spatial \(DPS\) :}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.2}{Coalition Statique \(CS\):}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.3}{Coalition Dynamique \(CD\):}{chapter.3}% 18
+\BOOKMARK [0][-]{chapter.4}{Discussion et conclusion :}{}% 19
+\BOOKMARK [0][-]{chapter.5}{Bibliographie :}{}% 20

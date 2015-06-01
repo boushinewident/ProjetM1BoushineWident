@@ -1,145 +1,108 @@
+extensions [matrix]
 
-globals [Cooperate Defect voisin listcouleur MatricePayOff Isolat]
-patches-own[
+globals [Cooperate Defect listcouleur MatricePayOff]
+turtles-own[
   leader
-  NumCoalition
+  numCoalition
   independant
   PayOff
-  Myleaderis
   Taxe
-  strategie]
-turtles-own[
-  isole
+  strategie
+  numAgent
   ]
 
 to setup
 ca
 ask patches [
-set pcolor pink - 2  
-set voisin neighbors4
-ask voisin[
- set pcolor magenta - 2
- ]]
-ask patches with [pcolor = 133] [
+ set pcolor white
  sprout 1 [
-   set color black
    set shape "airplane"
    set heading 1
-   set hidden? true 
- set NumCoalition who
- ]]
+   set color white
+   ;set hidden? true 
+   set numCoalition -1
+   set numAgent who
+ ]
+]
 
- 
 ;set payoffs [[][]] pour initialiser la matrice
-set Cooperate 1
-set Defect 0
-set Isolat -1
-set MatricePayOff[[0 -10][10 10]]
+set Cooperate 0
+set Defect 1
+set MatricePayOff matrix:from-row-list[[10 12][12 5]]
 reset-ticks
+choisirStrategieAleatoirement
+ColorierTurtlesSelonStrategie
 
 end
 
 
 
-to-report compromise [Ai-color Am-color]
-let ai ifelse-value (Ai-color = magenta - 2)[1][0]
-let am ifelse-value (Am-color = magenta - 2)[1][0]
-report item am (item ai MatricePayOff)
+to-report GainAgentA [strategieA strategieB]
+report matrix:get MatricePayOff strategieA strategieB
 end
 
 to go
-ask patches [
+  choisirStrategieAleatoirement
+  ColorierTurtlesSelonStrategie 
+  reinitialiserPayoffs
+ask turtles [
  jouer
   ]
 end
 
-to commencer
-  ask patches [
- start
+to jouer
+  let StrategieParcouru strategie
+  let numAgentPrincipal who
+  ;;Show strategie
+  
+  ask turtles-on neighbors4[
+    let strategieVoisin strategie
+    ;;show strategieVoisin
+    let gainParcouru GainAgentA StrategieParcouru strategieVoisin
+    ask turtle numAgentPrincipal [ set payoff payoff + gainParcouru ]
+    ;;show word "gain parcouru " gainParcouru 
+  ]
+  show word "payoff : " payoff
+end
+
+to ColorierTurtlesSelonStrategie
+  ask turtles with [strategie = 0] [
+    set color red + 3
+  ]
+  ask turtles with [strategie = 1] [
+    set color black
+  ]
+
+end
+
+  
+to reinitialiserPayoffs
+  ask turtles[
+    set payoff 0 
   ]
 end
 
-to jouer
-  set leader patches with [pcolor = 133] 
-  ask patches with[pcolor =  magenta - 2][
-   set Myleaderis NumCoalition
-    ]
-  ask leader[
-   set leader true
-   set Cooperate red - 1
-   set Defect turquoise - 1
-   set strategie (list Cooperate Defect)
-   set leader one-of strategie
-   set pcolor leader
-   ]  ;start   
-  
+;;Fonctions necessaires pour la gestion des coalitions.
+
+to ColorierPatchesSelonCoalition
+  ask patches [
+    ask turtles-here[
+      let nbAgentsDansCoalition CompterAgentDansCoalition numCoalition  
+      if nbAgentsDansCoalition > 1 [
+        set color red + 3         
+      ]
+    ]  
+  ]
 end
 
-
-to start
-   ask leader[
-ifelse pcolor = 14[
-   ask neighbors4[
- set pcolor Cooperate
-     ]
-   ][ask neighbors4 [
-     set pcolor Defect]] ]
+to-report CompterAgentDansCoalition [numCoalitionCherchee]
+  report count turtles with [ numCoalition = numCoalitionCherchee ]
 end
 
-to independance
-    ask patches[
-   set independant patches with [pcolor = magenta - 2]
-  ask independant[
-    set plabel 2]]
-end
-
-
-to isolated
-
-  ask patches with [pcolor = turquoise - 1][
-    let partiD neighbors4 with [pcolor = turquoise - 1]
-    ask partiD[
-    if pcolor = turquoise - 1[
-      set plabel 0
-     ; set Isolat 0
-      ]
-    ]
-      ]
-  ask patches with [pcolor = turquoise - 1] [
-    if plabel != 0[
-      set plabel 1
-        sprout 1[
-        set shape "x"
-        set color yellow
-        if plabel = 1[
-        set isole 1
-    ]]
-        ]
-    ]
-  ask patches with [pcolor = red - 1][
-   let partiC neighbors4 with [pcolor = red - 1]
-    ask partiC[
-    if pcolor = red - 1[
-      set plabel 0
-     ;set Isolat 0
-      ]
-    ]
-      ]
-  ask patches with [pcolor = red - 1] [
-    if plabel != 0[
-   ;if Isolat != 0 [
-      set plabel 1
-      sprout 1[
-        set shape "x"
-        set color yellow
-        if plabel = 1[
-        set isole 1
-    ]]
-      ]
-    ]
-  
-  
-
+to choisirStrategieAleatoirement
+  ask turtles [
+  set strategie one-of [ 0 1 ]
+]
 end
 @#$#@#$#@
 GRAPHICS-WINDOW
@@ -193,7 +156,7 @@ BUTTON
 120
 NIL
 go
-NIL
+T
 1
 T
 OBSERVER
@@ -203,56 +166,24 @@ NIL
 NIL
 1
 
-BUTTON
-62
-124
-178
-157
-NIL
-commencer
-NIL
-1
-T
-OBSERVER
-NIL
-NIL
-NIL
-NIL
-1
-
-BUTTON
-53
-161
-188
-194
-NIL
-independance
-NIL
-1
-T
-OBSERVER
-NIL
-NIL
-NIL
-NIL
-1
-
-BUTTON
-65
-205
-160
-238
-NIL
-isolated
-NIL
-1
-T
-OBSERVER
-NIL
-NIL
-NIL
-NIL
-1
+PLOT
+3
+135
+203
+285
+Population par action C:red-D:black
+ticks
+nbr
+0.0
+10.0
+0.0
+10.0
+true
+true
+"" ""
+PENS
+"Defect" 1.0 0 -16777216 true "" "plot count turtles with [color = 0]"
+"Coperate" 1.0 0 -1069655 true "" "plot count turtles with [color = 18]"
 
 @#$#@#$#@
 ## WHAT IS IT?
