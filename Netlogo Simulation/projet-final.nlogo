@@ -426,10 +426,10 @@ NIL
 1
 
 BUTTON
-30
-83
-181
-116
+32
+75
+183
+108
 go Dilemme Prisonnier
 goDilemme
 T
@@ -443,10 +443,10 @@ NIL
 1
 
 BUTTON
-26
-178
-167
-211
+31
+297
+172
+330
 Setup Coalition Fixe
 SetupCoalitionFixe
 NIL
@@ -460,10 +460,10 @@ NIL
 1
 
 BUTTON
-29
-221
-153
-254
+38
+336
+162
+369
 Go Coalition Fixe
 GoCoalitionFixe
 T
@@ -496,10 +496,10 @@ PENS
 "Defecte" 1.0 0 -16777216 true "" "plot count turtles with [color = black]"
 
 PLOT
-698
-239
-898
-389
+665
+187
+1290
+370
 Taxes
 NIL
 NIL
@@ -508,10 +508,25 @@ NIL
 0.0
 10.0
 true
-false
+true
 "" ""
 PENS
-"default" 1.0 0 -16777216 true "" "plot count turtles"
+"MoyennePayOff" 1.0 0 -16777216 true "" "plot MoyennePayOff"
+"moyennePayOffCooperateurs" 1.0 0 -7500403 true "" "plot moyennePayOffCooperateurs"
+"moyennePayOffDefecteurs" 1.0 0 -2674135 true "" "plot moyennePayOffDefecteurs"
+"MoyennePayOffCoalition" 1.0 0 -955883 true "" "plot MoyennePayOffCoalition"
+"MoyennePayOffIndependant" 1.0 0 -6459832 true "" "plot MoyennePayOffIndependant"
+"MoyennePayOffLeaders" 1.0 0 -1184463 true "" "plot MoyennePayOffLeaders"
+
+TEXTBOX
+18
+136
+204
+286
+                 PAYOFF:\n                   \nTurtle      C         D\n-------------------------------\n    C        3,3      0,5  \n-------------------------------\n    D        5,0      1,1\n-------------------------\n(C = Cooperate, D = Defect)
+12
+16.0
+1
 
 @#$#@#$#@
 ## WHAT IS IT?
