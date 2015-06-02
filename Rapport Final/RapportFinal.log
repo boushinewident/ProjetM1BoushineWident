@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.28)  1 JUN 2015 23:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.28)  2 JUN 2015 13:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -496,7 +496,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/lmr/bx/it --> OT1/ptm/m/it on input line 35.
 LaTeX Info: Redefining \hbar on input line 50.
 )
-No file RapportFinal.aux.
+(./RapportFinal.aux)
 \openout1 = `RapportFinal.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
@@ -513,7 +513,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
 LaTeX Font Info:    ... okay on input line 35.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 35.
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 35.
@@ -545,6 +545,8 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 35.
 LaTeX Info: Redefining \pageref on input line 35.
 LaTeX Info: Redefining \nameref on input line 35.
+
+(./RapportFinal.out) (./RapportFinal.out)
 \@outlinefile=\write3
 \openout3 = `RapportFinal.out'.
 
@@ -577,7 +579,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-<logo.jpg, id=4, 804.1242pt x 222.1098pt>
+<logo.jpg, id=84, 804.1242pt x 222.1098pt>
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 37.
@@ -655,6 +657,28 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./logo.jpg>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 38.
+ (./RapportFinal.toc
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `OML/aer/m/n' in size <10.95> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OML/aer/m/n' in size <8> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OML/aer/m/n' in size <6> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <6> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+)
 \tf@toc=\write4
 \openout4 = `RapportFinal.toc'.
 
@@ -671,24 +695,6 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 40.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 43.
-LaTeX Font Info:    Font shape `OML/aer/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 48.
-LaTeX Font Info:    Font shape `OML/aer/m/n' in size <8> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 48.
-LaTeX Font Info:    Font shape `OML/aer/m/n' in size <6> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 48.
-LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
-LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
-LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 48.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 48.
 
@@ -703,8 +709,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--52
 
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 52.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 53.
 
 Underfull \hbox (badness 10000) in paragraph at lines 55--59
 
@@ -757,15 +761,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 102--109
 
 [4]
 Chapitre 2.
-<Voisinage.jpg, id=44, 252.945pt x 250.9375pt>
+<Voisinage.jpg, id=139, 252.945pt x 250.9375pt>
 File: Voisinage.jpg Graphic file (type jpg)
  <use Voisinage.jpg>
 Package pdftex.def Info: Voisinage.jpg used on input line 117.
 (pdftex.def)             Requested size: 113.8126pt x 113.81297pt.
-
-
-LaTeX Warning: Reference `fig:spatial' on page 5 undefined on input line 136.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 124--141
 
@@ -960,32 +960,20 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 281.
  (./RapportFinal.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 281.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 281.
+Package rerunfilecheck Info: File `RapportFinal.out' has not changed.
+(rerunfilecheck)             Checksum: F1CAE443DA6CA7ABA25A77EB6E50CF33;1510.
 
-
-Package rerunfilecheck Warning: File `RapportFinal.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `RapportFinal.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  F1CAE443DA6CA7ABA25A77EB6E50CF33;1510.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 281.
  ) 
 Here is how much of TeX's memory you used:
- 8593 strings out of 493304
- 123694 string characters out of 6139871
- 209556 words of memory out of 5000000
- 11809 multiletter control sequences out of 15000+600000
- 87117 words of font info for 128 fonts, out of 8000000 for 9000
+ 8620 strings out of 493304
+ 124093 string characters out of 6139871
+ 209813 words of memory out of 5000000
+ 11829 multiletter control sequences out of 15000+600000
+ 84395 words of font info for 126 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  29i,12n,43p,577b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exi
@@ -1007,10 +995,10 @@ are/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
 mes/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on RapportFinal.pdf (13 pages, 385772 bytes).
+Output written on RapportFinal.pdf (13 pages, 388785 bytes).
 PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
- 112 compressed objects within 2 object streams
+ 220 PDF objects out of 1000 (max. 8388607)
+ 194 compressed objects within 2 object streams
  42 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 171 words of extra memory for PDF output out of 10000 (max. 10000000)
 

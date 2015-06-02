@@ -42,7 +42,7 @@
 
 \section{Présentation du projet :}
 
-La théorie des jeux permet de prédire le résultat des jeux de stratégie dans lequel les participants ont des informations incomplètes sur les intentions des autres . la plupart des recherches en théorie des jeux se concentre sur la façon dont ces participants interagissent , Cette théorie peut être appliquée a de multiples contextes tel que le contexte économique ou encore social afin d'analyser une société par exemple.
+La théorie des jeux permet de prédire le résultat des jeux de stratégie dans lequel les participants ont des informations incomplètes sur les intentions des autres . la plupart des recherches en théorie des jeux se concentrent sur la façon dont ces participants interagissent , Cette théorie peut être appliquée a de multiples contextes tel que le contexte économique ou encore social afin d'analyser une société par exemple.
 \newline
 \newline
 \Crucial{La théorie des jeux} peut être coopératifs et non coopératifs. un jeu coopératif est un jeu ou les participant peuvent avoir un comportement coopératif, dans ce cas le jeu est une compétition entre les coalition de joueurs , plutôt qu'entre les joueurs individuels, pour appréhender la coordination entre les joueurs on doit utiliser le système multi-agent (SMA) comme outil dans notre thématique de recherche.
@@ -71,7 +71,7 @@ Une stratégie ne peut être évaluée que si les autres stratégies sont déjà connue
 \subsubsection{Mémétique :}
 	Le concept mémétique, décrit les stratégies d'imitation dans les populations , les individus et les groupes mois efficaces, imitent le comportement des agents les plus efficaces afin d?améliorer leurs objectifs, en se basant sur un algorithme mémétique\footnote{Les algorithmes mémétiques sont une hybridation entre les algorithmes de recherche locale et les algorithmes génétiques. introduits par Dawkins .Ils sont appelés aussi algorithmes génétiques hybrides, et Recherche locale Hybrides. }[1].
 \subsection{Pourquoi étudier la formation de coalition :}
-Supposant que les agents sont égoïstes, ou potentiellement non efficaces, ils doivent mettre en oeuvre La formation de la Coalition qui est un mécanisme qui se base sur un objectif commun entre les groupes d'agents, pour atteindre efficacement des objectifs ou maximiser leur utilité du groupe [6] , et aussi pour trouver une solution plus satisfaisante pour cet ensemble d'agents.
+Supposons que les agents sont égoïstes, ou potentiellement non efficaces, ils doivent mettre en oeuvre La formation de la Coalition qui est un mécanisme qui se base sur un objectif commun entre les groupes d'agents, pour atteindre efficacement des objectifs ou maximiser leur utilité du groupe [6] , et aussi pour trouver une solution plus satisfaisante pour cet ensemble d'agents.
 \newline
 \newline
 la formation de la coalition offre plusieurs avantages [7]
@@ -86,7 +86,7 @@ la formation de la coalition offre plusieurs avantages [7]
 3 - La formation de coalition permet d?appréhender de façon plus flexible puisque les places ne sont pas fixes le système peut réagir au changement.
 \newline
 \newline
-4 - La agents sont à l'emplacement ou ils sont plus efficaces et ils bénéficient de leurs compétences respectives.
+4 - Les agents sont à l'emplacement où ils sont plus efficaces et ils bénéficient de leurs compétences respectives.
 \newline
 \newline
 **********************************************
@@ -105,7 +105,7 @@ Dans ce contexte nous présentons un modèle de simulation à base d'agents , adapt
 Chaque agent interagit avec ses voisins sous forme de partie , en choisissant soit de faire la défection soit de coopérer. ces agents peuvent décider de jouer de façon indépendante, ou ils peuvent décider de rejoindre ou de quitter une coalition.[1]
 \newline
 \newline
-La décision de rester ou de quitter une coalition est largement basée sur le gain obtenu par l'agent par rapport au gain obtenu par ses voisins, cela nécessite généralement calculer une valeur pour chaque coalition possible, qui indique combien bénéfique cette coalition serait si elle a été formée[1].
+La décision de rester ou de quitter une coalition est largement basée sur le gain obtenu par l'agent par rapport au gain obtenu par ses voisins, cela nécessite généralement calculer une valeur pour chaque coalition possible, qui indique combien serait bénéfique cette coalition serait si elle a été formée[1].
 
 \chapter{Description du modèle de coalition :}
 
@@ -216,10 +216,10 @@ $\Rightarrow$
 \newline
 \newline
 $\Rightarrow$
-  Leader :  agit comme ses parties le leader. Décide la stratégie commune pour le prochain tour , impose également un pourcentage de l'impôt à la récompense des agents «Coalition Part» à chaque itération, car il représente la coalition tout entière au cours de la procédure de négociation avec l'État, Ne peut pas décider de devenir indépendant à tout moment: il peut prendre cette décision seulement quand il n'y a pas de « Coalition part » à la coalition qu'il dirige. 
+  Leader :  agit comme ses parties le leader. Décide la stratégie commune pour le prochain tour , impose également un pourcentage de l'impôt à la récompense des agents «Coalition Part» à chaque itération, car il représente la coalition toute entière au cours de la procédure de négociation avec l'État, Ne peut pas décider de devenir indépendant à tout moment: il peut prendre cette décision seulement quand il n'y a pas de « Coalition part » à la coalition qu'il dirige. 
   \newline
   \newline
-  Les membres de la coalitions peuvent être soit isolés, soit non isolé, ils sont considérés comme isolés si aucun de leur voisin ne fait parti de leur coalition.
+  Les membres de la coalition peuvent être soit isolés, soit non isolé, ils sont considérés comme isolés si aucun de leur voisin ne fait partie de leur coalition.
   \newline
 \section{Les Coalitions :}
 \section{Les stratégies :}
@@ -228,10 +228,10 @@ Les différentes stratégies applicables sont les suivantes :
 Le pTFT est une stratégie se basant sur l'imitation de la stratégie de nos voisins.
 \newline
 \newline
-Il permet de reproduire l'action la plus effectuée dans notre voisinage en comptant le nombre de défections/ nombre de voisins sur le tour précédent.
+il permet de reproduire l'action la plus effectuée dans notre voisinage en comptant le nombre de défections/ nombre de voisins sur le tour précédent.
 \newline
 \newline
-Ainsi, si ¼ des voisins a coopérer au tour t-1, alors nous aurons  ¼  de chances de coopérer au tour t.
+Ainsi, si ¼ des voisins a coopéré au tour t-1, alors nous aurons  ¼  de chances de coopérer au tour t.
 \newline
 \subsection{Apprentissage Automates(LA) :}
 \chapter{Implémentation et expérimentation :}
