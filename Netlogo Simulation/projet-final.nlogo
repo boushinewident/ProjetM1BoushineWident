@@ -91,6 +91,7 @@ to setupCoalitionFixe
 end
 
 to goCoalitionFixe
+  tick
   reinitialiserPayoffs
   choisirStrategieAleatoirement
   getStrategieCoalition
@@ -500,7 +501,7 @@ PLOT
 187
 1290
 370
-Taxes
+Payoff
 NIL
 NIL
 0.0
@@ -512,11 +513,11 @@ true
 "" ""
 PENS
 "MoyennePayOff" 1.0 0 -16777216 true "" "plot MoyennePayOff"
-"moyennePayOffCooperateurs" 1.0 0 -7500403 true "" "plot moyennePayOffCooperateurs"
+"moyennePayOffCooperateurs" 1.0 0 -1184463 true "" "plot moyennePayOffCooperateurs"
 "moyennePayOffDefecteurs" 1.0 0 -2674135 true "" "plot moyennePayOffDefecteurs"
-"MoyennePayOffCoalition" 1.0 0 -955883 true "" "plot MoyennePayOffCoalition"
-"MoyennePayOffIndependant" 1.0 0 -6459832 true "" "plot MoyennePayOffIndependant"
-"MoyennePayOffLeaders" 1.0 0 -1184463 true "" "plot MoyennePayOffLeaders"
+"MoyennePayOffCoalition" 1.0 0 -12087248 true "" ";plot MoyennePayOffCoalition"
+"MoyennePayOffIndependant" 1.0 0 -6917194 true "" ";plot MoyennePayOffIndependant"
+"MoyennePayOffLeaders" 1.0 0 -14070903 true "" ";plot MoyennePayOffLeaders"
 
 TEXTBOX
 18
