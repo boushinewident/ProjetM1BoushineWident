@@ -74,6 +74,7 @@ to setupCoalitionFixe
       set heading 1
       ;set hidden? true 
       set numCoalition who
+      set color white
       set numAgent who
       set leader true
       set stratTemp -1
@@ -122,6 +123,7 @@ to setupCoalitionDynamique
       set heading 1
       ;set hidden? true 
       set numCoalition who
+      set color white
       set numAgent who
       set leader true
       set stratTemp -1
@@ -508,9 +510,9 @@ ticks
 
 BUTTON
 27
-36
+146
 193
-69
+179
 Setup DilemmePrisonnier
 setupDilemme\n\n
 NIL
@@ -524,10 +526,10 @@ NIL
 1
 
 BUTTON
-32
-75
-183
-108
+27
+179
+192
+212
 go Dilemme Prisonnier
 goDilemme
 T
@@ -541,10 +543,10 @@ NIL
 1
 
 BUTTON
-31
-297
-172
-330
+37
+279
+178
+312
 Setup Coalition Fixe
 SetupCoalitionFixe
 NIL
@@ -558,10 +560,10 @@ NIL
 1
 
 BUTTON
-38
-336
-162
-369
+37
+312
+178
+345
 Go Coalition Fixe
 GoCoalitionFixe
 T
@@ -575,10 +577,10 @@ NIL
 1
 
 PLOT
-664
-11
-1291
-173
+648
+10
+1275
+241
 Population plot
 Ticks
 Population
@@ -594,10 +596,10 @@ PENS
 "Defecte" 1.0 0 -16777216 true "" "plot count turtles with [color = black]"
 
 PLOT
-665
-187
-1290
-370
+648
+239
+1276
+469
 Payoff
 NIL
 NIL
@@ -617,35 +619,35 @@ PENS
 "MoyennePayOffLeaders" 1.0 0 -14070903 true "" "plot MoyennePayOffLeaders"
 
 TEXTBOX
-19
-155
-205
-305
+26
+10
+212
+160
                  PAYOFF:\n                   \nTurtle      C         D\n-------------------------------\n    C        3,3      0,5  \n-------------------------------\n    D        5,0      1,1\n-------------------------\n(C = Cooperate, D = Defect)
 12
 16.0
 1
 
 SLIDER
-21
-375
-195
-408
+22
+214
+196
+247
 NbLeadersInitialisation
 NbLeadersInitialisation
 0
 300
-19
-1
+300
+5
 1
 NIL
 HORIZONTAL
 
 SLIDER
-21
-423
-193
-456
+22
+245
+196
+278
 TaxeLeaders
 TaxeLeaders
 0
@@ -657,10 +659,10 @@ TaxeLeaders
 HORIZONTAL
 
 BUTTON
-696
-390
-875
-423
+19
+352
+198
+385
 Setup Coalition Dynamique
 SetupCoalitionDynamique
 NIL
@@ -674,10 +676,10 @@ NIL
 1
 
 BUTTON
-697
-433
-859
-466
+19
+385
+198
+418
 Go Coalition Dynamique
 GoCoalitionDynamique
 T
