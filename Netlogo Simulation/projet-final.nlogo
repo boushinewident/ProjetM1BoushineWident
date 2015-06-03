@@ -1,12 +1,13 @@
-extensions [matrix]
+extensions [matrix array]
 
-globals [Cooperate Defect listcouleur MatricePayOff listeCouleurs 
+globals [Cooperate Defect listcouleur MatricePayOff listeCouleurs MatriceCompromis
   TotalPayOffCooperateurs nbCooperateurs MoyennePayOffCooperateurs
   TotalPayOffDefecteurs nbDefecteurs MoyennePayOffDefecteurs
   TotalPayOffCoalition nbEnCoalitions MoyennePayOffCoalition 
   TotalPayOffIndependant nbIndependants MoyennePayOffIndependant
   TotalPayOffLeaders nbLeaders MoyennePayOffLeaders 
-  TotalPayOff MoyennePayOff]
+  TotalPayOff MoyennePayOff
+  ListeTurtles]
 turtles-own[
   leader
   numCoalition
@@ -18,6 +19,7 @@ turtles-own[
   isolated
   stratTemp
   numCooperateursVoisinsTourPrecedent
+  TableauCompromis
   ]
 
 to setupDilemme
@@ -33,6 +35,7 @@ to setupDilemme
       set numAgent who
       set leader true
       set stratTemp -1
+      set TableauCompromis array:from-list n-values count patches [0] 
     ]
   ]
   
@@ -74,7 +77,8 @@ to setupCoalitionFixe
       set numAgent who
       set leader true
       set stratTemp -1
-      set taxe ((random 100) / 1000)
+      set taxe ((random 100) / 10000 * TaxeLeaders  )
+      set TableauCompromis array:from-list n-values count patches [0] 
     ]
   ]
   
@@ -108,12 +112,61 @@ to goCoalitionFixe
   afficherMoyennes
 end
 
+to setupCoalitionDynamique
+  ca
+  
+  ask patches [
+    set pcolor white
+    sprout 1 [
+      set shape "airplane"
+      set heading 1
+      ;set hidden? true 
+      set numCoalition who
+      set numAgent who
+      set leader true
+      set stratTemp -1
+      set taxe ((random 100) / 10000 * TaxeLeaders  )
+      set TableauCompromis array:from-list n-values count patches [0] 
+    ]
+  ]
+  
+  ;set payoffs [[][]] pour initialiser la matrice
+  set Cooperate 0
+  set Defect 1
+  set MatricePayOff matrix:from-row-list[[3 0][5 1]]
+  set listeCouleurs [4 14 24 34 44 54 64 74 84 94 104 114 124 134 6 16 26 36 46 56 66 76 86 96 106 116 126 136]
+  reset-ticks
+  GenererCoalitionAleatoire
+  choisirStrategieAleatoirement
+  ColorierTurtlesSelonStrategie
+  ColorierPatchesSelonCoalition
+end
+
+to goCoalitionDynamique
+  tick
+  reinitialiserPayoffs
+  choisirStrategieAleatoirement
+  getStrategieCoalition
+  ColorierTurtlesSelonStrategie 
+  ColorierPatchesSelonCoalition
+  
+  ask turtles [
+    jouer
+  ]
+  PayerTaxeALeader
+  
+  CalculerTotalPayoffs
+  CalculerMoyennes
+  afficherMoyennes
+  MouvementCoalitions
+end
+
 
 
 
 ;;;;;;;;;;;;;FONCTIONS COALITIONS
 to GenererCoalitionAleatoire 
-  foreach [1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40] [
+  foreach n-values nbLeadersInitialisation [?]  [
     ask turtle ? [
       if not hasLeader [
         let numCoalitionARejoindre numCoalition
@@ -193,8 +246,9 @@ to PayerTaxeALeader
       let numAgentParcouru numAgent
       let payoffParcouru payoff
       ask getLeader [
-        set payoff (payoff + ( payoffParcouru * taxe ) ) 
-        ask turtle numAgentParcouru [ set payoff (payoff - ( payoffParcouru * taxe ) ) ]
+        set payoff (payoff + ( payoffParcouru * taxe ) )
+        let taxeLeader taxe 
+        ask turtle numAgentParcouru [ set payoff (payoff - ( payoffParcouru * taxeLeader ) ) ]
       ]
     ]
   ]
@@ -214,6 +268,7 @@ to ColorierPatchesSelonCoalition
     ]  
   ]
 end
+
 
 
 ;;FONCTIONS STRATEGIES
@@ -364,14 +419,26 @@ to jouer
   let numCoalitionPrincipal numCoalition
   ask turtles-on neighbors4[
     let strategieVoisin strategie
+    let numAgentVoisin numAgent
     ifelse numCoalitionPrincipal = numCoalition [
-      let gainParcouru GainAgentA cooperate cooperate    
+      ask turtle numAgentPrincipal [
+        set payoff payoff +  (GainAgentA cooperate cooperate) 
+        array:set TableauCompromis numAgentVoisin ((array:item TableauCompromis numAgentVoisin) + 10)
+      ]   
     ]
     [
-      let gainParcouru GainAgentA StrategiePrincipal strategieVoisin
+      ask turtle numAgentPrincipal [ 
+        set payoff payoff +  (GainAgentA StrategiePrincipal strategieVoisin) 
+        ifelse strategieVoisin = 0 [
+          array:set TableauCompromis numAgentVoisin ((array:item TableauCompromis numAgentVoisin) + 10) 
+        ]
+        [
+          array:set TableauCompromis numAgentVoisin ((array:item TableauCompromis numAgentVoisin) - 10)
+        ]
+      ]
     ]
-    let gainParcouru GainAgentA StrategiePrincipal strategieVoisin
-    ask turtle numAgentPrincipal [ set payoff payoff + gainParcouru ]
+
+    
   ]
 end
 
@@ -380,7 +447,37 @@ to-report GainAgentA [strategieA strategieB]
   report matrix:get MatricePayOff strategieA strategieB
 end
 
-  
+to MouvementCoalitions
+  ask turtles[
+    let numMeilleurVoisin getNumeroMeilleurVoisin
+    let payoffMeilleurVoisin [payoff] of turtle numMeilleurVoisin
+    let PirePayoff worstPayOff
+    ifelse hasLeader[
+      
+    ]
+    [
+      if CompterAgentDansCoalition numCoalition <= 1 ;; est indépendant
+      [
+        if ((PirePayOff) or ( (Payoff < payOffMeilleurVoisin ) and ((array:item TableauCompromis numMeilleurVoisin) > 75) ))[
+          RejoindreCoalition ([numCoalition] of turtle numMeilleurVoisin) 
+        ]
+      ] 
+    ]    
+  ]
+end
+
+
+to-report getNumeroMeilleurVoisin
+  let listePayoff [numAgent] of (turtles-on neighbors4) with-max[payOff]
+  report item 0 listePayoff
+end 
+
+to-report worstPayOff
+  let listePayoff [payoff] of (turtles-on neighbors4) with-min[payOff]
+  ifelse payoff <= item 0 listePayoff
+  [ report true ]
+  [ report false ]
+end
 @#$#@#$#@
 GRAPHICS-WINDOW
 210
@@ -512,21 +609,85 @@ true
 true
 "" ""
 PENS
-"MoyennePayOff" 1.0 0 -16777216 true "" "plot MoyennePayOff"
+"MoyennePayOff" 1.0 0 -3889007 true "" "plot MoyennePayOff"
 "moyennePayOffCooperateurs" 1.0 0 -1184463 true "" "plot moyennePayOffCooperateurs"
 "moyennePayOffDefecteurs" 1.0 0 -2674135 true "" "plot moyennePayOffDefecteurs"
-"MoyennePayOffCoalition" 1.0 0 -12087248 true "" ";plot MoyennePayOffCoalition"
-"MoyennePayOffIndependant" 1.0 0 -6917194 true "" ";plot MoyennePayOffIndependant"
-"MoyennePayOffLeaders" 1.0 0 -14070903 true "" ";plot MoyennePayOffLeaders"
+"MoyennePayOffCoalition" 1.0 0 -12087248 true "" "plot MoyennePayOffCoalition"
+"MoyennePayOffIndependant" 1.0 0 -6759204 true "" "plot MoyennePayOffIndependant"
+"MoyennePayOffLeaders" 1.0 0 -14070903 true "" "plot MoyennePayOffLeaders"
 
 TEXTBOX
-18
-136
-204
-286
+19
+155
+205
+305
                  PAYOFF:\n                   \nTurtle      C         D\n-------------------------------\n    C        3,3      0,5  \n-------------------------------\n    D        5,0      1,1\n-------------------------\n(C = Cooperate, D = Defect)
 12
 16.0
+1
+
+SLIDER
+21
+375
+195
+408
+NbLeadersInitialisation
+NbLeadersInitialisation
+0
+300
+19
+1
+1
+NIL
+HORIZONTAL
+
+SLIDER
+21
+423
+193
+456
+TaxeLeaders
+TaxeLeaders
+0
+10
+8.5
+0.1
+1
+%
+HORIZONTAL
+
+BUTTON
+696
+390
+875
+423
+Setup Coalition Dynamique
+SetupCoalitionDynamique
+NIL
+1
+T
+OBSERVER
+NIL
+NIL
+NIL
+NIL
+1
+
+BUTTON
+697
+433
+859
+466
+Go Coalition Dynamique
+GoCoalitionDynamique
+T
+1
+T
+OBSERVER
+NIL
+NIL
+NIL
+NIL
 1
 
 @#$#@#$#@

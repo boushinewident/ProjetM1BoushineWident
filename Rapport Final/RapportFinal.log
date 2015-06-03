@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.28)  2 JUN 2015 15:11
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.4.28)  3 JUN 2015 16:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -789,191 +789,200 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--141
 [5
 
  <./Voisinage.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 180--205
+Underfull \hbox (badness 10000) in paragraph at lines 181--206
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--205
+Underfull \hbox (badness 10000) in paragraph at lines 181--206
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--205
+Underfull \hbox (badness 10000) in paragraph at lines 181--206
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--205
+Underfull \hbox (badness 10000) in paragraph at lines 181--206
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--205
+Underfull \hbox (badness 10000) in paragraph at lines 181--206
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--205
+Underfull \hbox (badness 10000) in paragraph at lines 181--206
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--205
+Underfull \hbox (badness 10000) in paragraph at lines 181--206
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 180--205
+Underfull \hbox (badness 10000) in paragraph at lines 181--206
 
  []
 
 [6]
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 207.
- (/usr/share/texmf/tex/latex/lm/t1lmr.fd
+Overfull \hbox (64.59032pt too wide) in paragraph at lines 210--225
+[][] 
+ []
+
+
+Overfull \hbox (48.76764pt too wide) in paragraph at lines 236--251
+[][] 
+ []
+
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 261.
+(/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 10000) in paragraph at lines 207--224
+Underfull \hbox (badness 10000) in paragraph at lines 261--278
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--224
+Underfull \hbox (badness 10000) in paragraph at lines 261--278
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--224
+Underfull \hbox (badness 10000) in paragraph at lines 261--278
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--224
+Underfull \hbox (badness 10000) in paragraph at lines 261--278
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 207--224
+Underfull \hbox (badness 10000) in paragraph at lines 261--278
 
  []
 
 [7]
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 234.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 289.
 
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 228--236
+Underfull \hbox (badness 10000) in paragraph at lines 283--291
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--236
+Underfull \hbox (badness 10000) in paragraph at lines 283--291
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 228--236
+Underfull \hbox (badness 10000) in paragraph at lines 283--291
 
  []
 
-[8]
+[8] [9]
 Chapitre 3.
-[9
-
-]
-Chapitre 4.
 [10
 
 ]
-Chapitre 5.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 281.
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--281
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--281
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--281
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--281
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--281
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--281
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--281
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--281
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--281
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--281
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--281
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--281
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 243--281
-
- []
-
+Chapitre 4.
 [11
 
-] [12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 281.
+]
+Chapitre 5.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 336.
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--336
+
+ []
+
+[12
+
+] [13]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 336.
  (./RapportFinal.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 281.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 281.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 336.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 336.
 Package rerunfilecheck Info: File `RapportFinal.out' has not changed.
 (rerunfilecheck)             Checksum: F1CAE443DA6CA7ABA25A77EB6E50CF33;1510.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 281.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 336.
  ) 
 Here is how much of TeX's memory you used:
- 8620 strings out of 493304
- 124093 string characters out of 6139871
- 209813 words of memory out of 5000000
- 11829 multiletter control sequences out of 15000+600000
- 84395 words of font info for 126 fonts, out of 8000000 for 9000
+ 8627 strings out of 493304
+ 124169 string characters out of 6139871
+ 212947 words of memory out of 5000000
+ 11832 multiletter control sequences out of 15000+600000
+ 87243 words of font info for 128 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  29i,12n,43p,577b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exi
@@ -995,10 +1004,10 @@ are/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
 mes/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on RapportFinal.pdf (13 pages, 388785 bytes).
+Output written on RapportFinal.pdf (14 pages, 391342 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
- 194 compressed objects within 2 object streams
- 42 named destinations out of 1000 (max. 500000)
+ 230 PDF objects out of 1000 (max. 8388607)
+ 202 compressed objects within 3 object streams
+ 45 named destinations out of 1000 (max. 500000)
  171 words of extra memory for PDF output out of 10000 (max. 10000000)
 
