@@ -77,6 +77,7 @@ to setupCoalitionFixe
       set heading 1
       ;set hidden? true 
       set numCoalition who
+      set color white
       set numAgent who
       set ModeChoixStrategie one-of [0 1]
       set leader true
@@ -126,6 +127,7 @@ to setupCoalitionDynamique
       set shape "airplane"
       set heading 1
       set numCoalition who
+      set color white
       set ModeChoixStrategie one-of [0 1]
       set numAgent who
       set leader true
@@ -553,10 +555,10 @@ ticks
 30.0
 
 BUTTON
-27
-36
-193
-69
+23
+150
+189
+183
 Setup DilemmePrisonnier
 setupDilemme\n\n
 NIL
@@ -570,10 +572,10 @@ NIL
 1
 
 BUTTON
-32
-75
-183
-108
+23
+184
+189
+217
 go Dilemme Prisonnier
 goDilemme
 T
@@ -587,10 +589,10 @@ NIL
 1
 
 BUTTON
-31
-297
-172
-330
+25
+285
+188
+318
 Setup Coalition Fixe
 SetupCoalitionFixe
 NIL
@@ -604,10 +606,10 @@ NIL
 1
 
 BUTTON
-38
-336
-162
-369
+25
+319
+189
+352
 Go Coalition Fixe
 GoCoalitionFixe
 T
@@ -621,10 +623,10 @@ NIL
 1
 
 PLOT
-664
+650
 11
-1291
-173
+1277
+236
 Population plot
 Ticks
 Population
@@ -640,10 +642,10 @@ PENS
 "Defecte" 1.0 0 -16777216 true "" "plot count turtles with [color = black]"
 
 PLOT
-665
-187
-1290
-370
+650
+236
+1275
+471
 Payoff
 NIL
 NIL
@@ -663,20 +665,20 @@ PENS
 "MoyennePayOffLeaders" 1.0 0 -14070903 true "" "plot MoyennePayOffLeaders"
 
 TEXTBOX
-19
-155
-205
-305
+24
+10
+210
+160
                  PAYOFF:\n                   \nTurtle      C         D\n-------------------------------\n    C        3,3      0,5  \n-------------------------------\n    D        5,0      1,1\n-------------------------\n(C = Cooperate, D = Defect)
 12
 16.0
 1
 
 SLIDER
-21
-375
-195
-408
+19
+217
+193
+250
 NbLeadersInitialisation
 NbLeadersInitialisation
 0
@@ -688,10 +690,10 @@ NIL
 HORIZONTAL
 
 SLIDER
-21
-423
+19
+251
 193
-456
+284
 TaxeLeaders
 TaxeLeaders
 0
@@ -703,10 +705,10 @@ TaxeLeaders
 HORIZONTAL
 
 BUTTON
-696
-390
-875
-423
+17
+362
+196
+397
 Setup Coalition Dynamique
 SetupCoalitionDynamique
 NIL
@@ -720,13 +722,13 @@ NIL
 1
 
 BUTTON
-697
-433
-859
-466
+18
+398
+197
+431
 Go Coalition Dynamique
 GoCoalitionDynamique
-NIL
+T
 1
 T
 OBSERVER
