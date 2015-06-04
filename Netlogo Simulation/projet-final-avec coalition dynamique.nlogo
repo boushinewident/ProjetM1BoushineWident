@@ -414,11 +414,11 @@ end
 
 to CalculerMoyennes
   set MoyennePayOff TotalPayoff / (count turtles)
-  if nbcooperateurs > 0 [set MoyennePayOffCooperateurs TotalPayOffCooperateurs / nbCooperateurs]
-  if nbDefecteurs > 0 [set MoyennePayOffDefecteurs TotalPayOffDefecteurs / nbDefecteurs]
-  if nbEnCoalitions > 0 [set MoyennePayOffCoalition TotalPayOffCoalition / nbEnCoalitions]
-  if nbIndependants > 0 [set MoyennePayOffIndependant TotalPayOffIndependant / nbIndependants]
-  if nbLeaders > 0 [set MoyennePayOffLeaders TotalPayOffLeaders / nbLeaders]
+  ifelse nbcooperateurs > 0 [set MoyennePayOffCooperateurs TotalPayOffCooperateurs / nbCooperateurs][ stop ]
+  ifelse nbDefecteurs > 0 [set MoyennePayOffDefecteurs TotalPayOffDefecteurs / nbDefecteurs][ stop ]
+  ifelse nbEnCoalitions > 0 [set MoyennePayOffCoalition TotalPayOffCoalition / nbEnCoalitions][ stop ]
+  ifelse nbIndependants > 0 [set MoyennePayOffIndependant TotalPayOffIndependant / nbIndependants][ stop ]
+  ifelse nbLeaders > 0 [set MoyennePayOffLeaders TotalPayOffLeaders / nbLeaders][ stop ]
   
 end
 

@@ -276,26 +276,26 @@ $\Rightarrow$
   Les membres de la coalition peuvent être soit isolés, soit non isolé, ils sont considérés comme isolés si aucun de leur voisin ne fait partie de leur coalition.
   \newline
 \section{Les Coalitions :}
-Dans notre cas, comme on s'est basé sur les travaux de Juan.C [1], le modèle de formation de coalition est adapté à un jeu spatial du dilemme du prisonnier procède comme suite :
+Dans notre cas, comme on s'est basé sur les travaux de Juan.C [1], le modèle de formation de coalition est adapté à un jeu spatial du dilemme du prisonnier et procède comme suite :
 \newline
 \newline
--Chaque agent de la cellule $\cal Ai$ essaie d'augmenter son pourcentage de compromis avec un agent voisin $\cal Aj$ à 10\% lorsque $\cal Ai$  se comporte comme un coopérateur ou réduit son compromis de 10\% lorsque $\cal Aj$ se comporte comme un defecte.
+-Chaque agent de la cellule $\cal Ai$ essaie d'augmenter son pourcentage de compromis avec un agent voisin $\cal Aj$ à 10\% lorsque $\cal Aj$  se comporte comme un coopérateur ou réduit son compromis de 10\% lorsque $\cal Aj$ se comporte comme un defecte.
 \newline
 \newline
 Quand une cellule appartient à une coalition, elle coopère avec les autres cellules de la coalition, et comme le leader décide (C ou D) avec les cellules en dehors de sa coalition.
 \newline
 \newline
 L'algorithme peut être expliqué comme suite:
-Il y a deux alternatives, soit l'agent Ai a un leader ou l'agent Ai est indépendant. si l'agent Ai a un chef, trois possibilités dont vérifiés:
+Il y a deux alternatives, soit l'agent Ai a un leader ou l'agent Ai est indépendant. si l'agent Ai a un chef, trois possibilités sont vérifiés:
 \newline
 \newline
-1- si l'agent Ai est isolé il devient indépendant. cette modèle de situation où il n'y a pas d'autre cellule appartenant à la coalition dans son voisinage. cette règle soutient l'existence de groupes de cellules isolés à partir d'une plus grande coalition.
+1- si l'agent Ai est isolé il devient indépendant. cette modèle de situation où il n'y a pas d'autre cellule appartenant à la coalition dans son voisinage.
 \newline
 \newline
 2-si l'agent Ai est pas isolé , et le gain de Ai est le meilleur dans son voisinage est supérieur à zero, alors Ai augmente son compromis avec son chef de 10\%.
 \newline
 \newline
-3-si le gain de Ai est pas le meilleur et son leader est pas Am, alors Ai peut prendre plusieurs décisions. tout d'abord, Ai réduit son compromis avec son chef de 10\%, si le gait de Ai est le pire dans son voisinage, ou son compromis avec Am est supérieur à 75\%, il rejoins la coalition de Am sachant que Am ne peut pas être un leader. Sinon si Am est une cellule indépendante et le compromis de Ai avec son chef est inférieur à 25\% alors il déclare son indépendance. enfin, si Ai est indépendant. il a le pire gain ou il est pas le meilleur mais son compromis avec Am est supérieur à 75\% puis elle rejoint la coalition de Am.
+3-si le gain de Ai est pas le meilleur et son leader est pas Am, alors Ai peut prendre plusieurs décisions. tout d'abord, Ai réduit son compromis avec son chef de 10\%, si le gain de Ai est le pire dans son voisinage, ou son compromis avec Am est supérieur à 75\%, il rejoint la coalition de Am sachant que Am ne peut pas être un leader. Sinon si Am est une cellule indépendante et le compromis de Ai avec son chef est inférieur à 25\% alors il déclare son indépendance. enfin, si Ai est indépendant. il a le pire gain ou il est pas le meilleur mais son compromis avec Am est supérieur à 75\% puis elle rejoint la coalition de Am.
 \section{Les stratégies :}
 Les différentes stratégies applicables sont les suivantes : 
 \subsection{probabiliste Tit-for-tat(PTFT) :}
