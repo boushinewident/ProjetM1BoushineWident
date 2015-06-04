@@ -152,6 +152,7 @@ end
 to goCoalitionDynamique
   tick
   reinitialiserPayoffs
+  ;mettreAJourStrategieTitForTat
   mettreAJourStrategieTitForTat
   mettreAJourStrategieAleatoirement
   getStrategieCoalition
@@ -683,8 +684,8 @@ NbLeadersInitialisation
 NbLeadersInitialisation
 0
 300
-19
-1
+100
+5
 1
 NIL
 HORIZONTAL
@@ -698,7 +699,7 @@ TaxeLeaders
 TaxeLeaders
 0
 10
-4.1
+3.8
 0.1
 1
 %
