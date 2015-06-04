@@ -684,7 +684,7 @@ NbLeadersInitialisation
 NbLeadersInitialisation
 0
 300
-100
+5
 5
 1
 NIL
