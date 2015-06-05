@@ -13,11 +13,12 @@
 \contentsline {section}{\numberline {2.2}Les R\^oles D'agents :}{7}{section.2.2}
 \contentsline {section}{\numberline {2.3}Les Coalitions :}{8}{section.2.3}
 \contentsline {section}{\numberline {2.4}Les strat\'egies :}{9}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}probabiliste Tit-for-tat(PTFT) :}{9}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Apprentissage Automates(LA) :}{9}{subsection.2.4.2}
-\contentsline {chapter}{\numberline {3}Impl\'ementation et exp\'erimentation :}{10}{chapter.3}
-\contentsline {section}{\numberline {3.1}dilemme de prisonnier Spatial (DPS) :}{10}{section.3.1}
-\contentsline {section}{\numberline {3.2}Coalition Statique (CS):}{10}{section.3.2}
-\contentsline {section}{\numberline {3.3}Coalition Dynamique (CD):}{10}{section.3.3}
-\contentsline {chapter}{\numberline {4}Discussion et conclusion :}{11}{chapter.4}
-\contentsline {chapter}{\numberline {5}Bibliographie :}{12}{chapter.5}
+\contentsline {subsection}{\numberline {2.4.1}Random :}{9}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}probabiliste Tit-for-tat(PTFT) :}{9}{subsection.2.4.2}
+\contentsline {subsection}{\numberline {2.4.3}Apprentissage Automates(LA) :}{10}{subsection.2.4.3}
+\contentsline {chapter}{\numberline {3}Impl\'ementation et exp\'erimentation :}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}dilemme de prisonnier Spatial (DPS) :}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}Coalition Statique (CS):}{11}{section.3.2}
+\contentsline {section}{\numberline {3.3}Coalition Dynamique (CD):}{11}{section.3.3}
+\contentsline {chapter}{\numberline {4}Discussion et conclusion :}{12}{chapter.4}
+\contentsline {chapter}{\numberline {5}Bibliographie :}{13}{chapter.5}

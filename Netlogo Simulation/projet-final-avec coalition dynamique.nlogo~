@@ -56,7 +56,14 @@ to setupDilemme
 end
 
 to goDilemme
-  tick  
+  tick
+  ask turtles[
+   ifelse CompterAgentDansCoalition numCoalition = (count turtles)[set stopper true][set stopper false]
+  ]
+  if stopper [
+    stop 
+  ]
+  
   reinitialiserPayoffs
   mettreAJourStrategieTitForTat
   mettreAJourStrategieAleatoirement

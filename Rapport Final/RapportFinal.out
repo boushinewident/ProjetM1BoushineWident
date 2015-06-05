@@ -10,11 +10,12 @@
 \BOOKMARK [1][-]{section.2.2}{Les R\364les D'agents :}{chapter.2}% 10
 \BOOKMARK [1][-]{section.2.3}{Les Coalitions :}{chapter.2}% 11
 \BOOKMARK [1][-]{section.2.4}{Les strat\351gies :}{chapter.2}% 12
-\BOOKMARK [2][-]{subsection.2.4.1}{probabiliste Tit-for-tat\(PTFT\) :}{section.2.4}% 13
-\BOOKMARK [2][-]{subsection.2.4.2}{Apprentissage Automates\(LA\) :}{section.2.4}% 14
-\BOOKMARK [0][-]{chapter.3}{Impl\351mentation et exp\351rimentation :}{}% 15
-\BOOKMARK [1][-]{section.3.1}{dilemme de prisonnier Spatial \(DPS\) :}{chapter.3}% 16
-\BOOKMARK [1][-]{section.3.2}{Coalition Statique \(CS\):}{chapter.3}% 17
-\BOOKMARK [1][-]{section.3.3}{Coalition Dynamique \(CD\):}{chapter.3}% 18
-\BOOKMARK [0][-]{chapter.4}{Discussion et conclusion :}{}% 19
-\BOOKMARK [0][-]{chapter.5}{Bibliographie :}{}% 20
+\BOOKMARK [2][-]{subsection.2.4.1}{Random :}{section.2.4}% 13
+\BOOKMARK [2][-]{subsection.2.4.2}{probabiliste Tit-for-tat\(PTFT\) :}{section.2.4}% 14
+\BOOKMARK [2][-]{subsection.2.4.3}{Apprentissage Automates\(LA\) :}{section.2.4}% 15
+\BOOKMARK [0][-]{chapter.3}{Impl\351mentation et exp\351rimentation :}{}% 16
+\BOOKMARK [1][-]{section.3.1}{dilemme de prisonnier Spatial \(DPS\) :}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Coalition Statique \(CS\):}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.3}{Coalition Dynamique \(CD\):}{chapter.3}% 19
+\BOOKMARK [0][-]{chapter.4}{Discussion et conclusion :}{}% 20
+\BOOKMARK [0][-]{chapter.5}{Bibliographie :}{}% 21

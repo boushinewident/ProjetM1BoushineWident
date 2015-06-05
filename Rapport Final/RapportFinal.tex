@@ -296,8 +296,18 @@ Il y a deux alternatives, soit l'agent Ai a un leader ou l'agent Ai est indépend
 \newline
 \newline
 3-si le gain de Ai est pas le meilleur et son leader est pas Am, alors Ai peut prendre plusieurs décisions. tout d'abord, Ai réduit son compromis avec son chef de 10\%, si le gain de Ai est le pire dans son voisinage, ou son compromis avec Am est supérieur à 75\%, il rejoint la coalition de Am sachant que Am ne peut pas être un leader. Sinon si Am est une cellule indépendante et le compromis de Ai avec son chef est inférieur à 25\% alors il déclare son indépendance. enfin, si Ai est indépendant. il a le pire gain ou il est pas le meilleur mais son compromis avec Am est supérieur à 75\% puis elle rejoint la coalition de Am.
+\newline
+\newline
+Un Leader peut imposer un pourcentage d'impôt sur le revenu de les cellules de sa coalition. 
+\newline
+\newline
+cela signifie qu'un leader augmente son revenu à un montant qui dépend du pourcentage de la taxe , le nombre de cellules font partie de sa coalition , le revenu de chacune de ces cellules.
+\newline
+\newline
+Un grand pourcentage de taxe , signifie plus de revenus pour le leader à court terme, mais cela peut provoquer faillite pour les cellules de sa coalition qui peuvent devenir indépendants.
 \section{Les stratégies :}
-Les différentes stratégies applicables sont les suivantes : 
+Les différentes stratégies applicables sont les suivantes :
+\subsection{Random :}
 \subsection{probabiliste Tit-for-tat(PTFT) :}
 Le pTFT est une stratégie se basant sur l'imitation de la stratégie de nos voisins.
 \newline
