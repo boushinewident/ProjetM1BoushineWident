@@ -1,0 +1,61 @@
+\begin{thebibliography}{10}
+
+\bibitem{John:Online}
+John nash{@ONLINE}.
+\newblock http://www.economie.gouv.fr/facileco/john-nash.
+
+\bibitem{axelrod2006evolution}
+R.M. Axelrod.
+\newblock {\em The Evolution of Cooperation}.
+\newblock Basic Books, 2006.
+
+\bibitem{binmore1992fun}
+Ken Binmore.
+\newblock Fun and games, a text on game theory.
+\newblock 1992.
+
+\bibitem{RePEc:eee:jetheo:v:57:y:1992:i:2:p:278-305}
+Kenneth~G. Binmore and Larry Samuelson.
+\newblock Evolutionary stability in repeated games played by finite automata.
+\newblock {\em Journal of Economic Theory}, 57(2):278--305, 1992.
+
+\bibitem{Burguillo-Rial:2009:MFD:1558013.1558073}
+Juan~C. Burguillo-Rial.
+\newblock A memetic framework for describing and simulating spatial prisoner's
+  dilemma with coalition formation.
+\newblock In {\em Proceedings of The 8th International Conference on Autonomous
+  Agents and Multiagent Systems - Volume 1}, AAMAS '09, pages 441--448,
+  Richland, SC, 2009. International Foundation for Autonomous Agents and
+  Multiagent Systems.
+
+\bibitem{MonProf}
+Philippe Collard, S{\'e}bastien Verel, Manuel Clergue, and Marco Tomassini.
+\newblock {\em Syst{\`e}mes complexes: Une introduction par la pratique}.
+\newblock Presses polytechniques et universitaires romandes, Lausanne, 2013.
+
+\bibitem{dorat:tel-00839387}
+R{\'e}mi Dorat.
+\newblock {\em {Spatial organizations in evolutionary game theory}}.
+\newblock Theses, {Universit{\'e} des Sciences et Technologie de Lille - Lille
+  I}, June 2009.
+
+\bibitem{osborne1994course}
+Martin~J Osborne and Ariel Rubinstein.
+\newblock {\em A course in game theory}.
+\newblock MIT press, 1994.
+
+\bibitem{Azoulay2002Negotiation}
+Sarit~Kraus Rina Azoulay-Schwartz.
+\newblock {\em Negotiation on Data Allocation in Multi-Agent Environments}.
+\newblock Kluwer Academic Publishers, 2002.
+
+\bibitem{smith1982evolution}
+J.M. Smith.
+\newblock {\em Evolution and the Theory of Games}.
+\newblock Cambridge University Press, 1982.
+
+\bibitem{Theodore2001Theory}
+Bernhard von~Stengel Theodore L.~Turocy.
+\newblock Game theory, 2001.
+
+\end{thebibliography}

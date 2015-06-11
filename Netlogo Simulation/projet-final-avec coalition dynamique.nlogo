@@ -6,8 +6,12 @@ globals [Cooperate Defect listcouleur MatricePayOff listeCouleurs MatriceComprom
   TotalPayOffCoalition nbEnCoalitions MoyennePayOffCoalition 
   TotalPayOffIndependant nbIndependants MoyennePayOffIndependant
   TotalPayOffLeaders nbLeaders MoyennePayOffLeaders 
-  TotalTaxesLeaders MoyenneTaxesLeaders
+  TotalTaxesPayees MoyenneTaxesPayees
   TotalPayOff MoyennePayOff
+  TotalPayOffMCSRandom nbMCSRandom   MoyennePayOffMCSRandom
+  nbCooperateursMCSPTFT nbDefecteursMCSPTFT
+  TotalPayOffMCSpTFT nbMCSpTFT   MoyennePayOffMCSPTFT
+  TotalTaxesLeaders MoyenneTaxesLeaders
   ListeTurtles
   stopper]
 turtles-own[
@@ -56,6 +60,10 @@ to setupDilemme
 end
 
 to goDilemme
+  tick
+  ask turtles[
+   if CompterAgentDansCoalition numCoalition = (count turtles)[stop]
+  ]
   tick  
   reinitialiserPayoffs
   mettreAJourStrategieTitForTat
@@ -139,6 +147,8 @@ to setupCoalitionDynamique
       set heading 1
       set numCoalition who
       set color white
+      set ModeChoixStrategie one-of [0 1]
+      ;;set ModeChoixStrategie 0
       ;;set ModeChoixStrategie one-of [0 1]
       set ModeChoixStrategie 0
       set numAgent who
@@ -198,6 +208,8 @@ to goCoalitionDynamique
   ask turtles[
     if LeaderAuDebutDuTour
     [
+      ;;if  (CompterAgentDansCoalition numCoalition = 1) [set taxe (taxe * 0.7)] 
+      if  (CompterAgentDansCoalition numCoalition = 1) [set taxe ((random 100) / 10000 * TaxeLeaders  )]
       if  (CompterAgentDansCoalition numCoalition = 1) [set taxe (taxe * 0.7)] 
     ]
   ]  
@@ -411,10 +423,23 @@ to reinitialiserPayoffs
   set TotalPayOffLeaders 0 
   set nbLeaders 0
   
+  set MoyenneTaxesPayees 0
+  set TotalTaxesPayees 0
+  
+  set MoyennePayOffMCSRandom 0
+  set TotalPayOffMCSRandom 0
+  set nbMCSRandom 0
+  
+  set MoyennePayOffMCSPTFT 0
+  set TotalPayOffMCSpTFT 0
+  set nbMCSpTFT 0
+  
+  set nbCooperateursMCSPTFT 0
+  set nbDefecteursMCSPTFT 0
   set MoyenneTaxesLeaders 0
   set TotalTaxesLeaders 0
   
-  
+
 end
 
 
@@ -430,11 +455,28 @@ to CalculerTotalPayoffs
      set nbDefecteurs nbDefecteurs + 1
    ]
    
+   if ModeChoixStrategie = 0
+   [
+     set TotalPayOffMCSRandom TotalPayOffMCSRandom + payoff
+     set nbMCSRandom nbMCSRandom + 1
+   ]
+   if ModeChoixStrategie = 1
+   [
+     if strategie = 0 [set nbCooperateursMCSPTFT nbCooperateursMCSPTFT + 1]
+     if strategie = 1 [set nbDefecteursMCSPTFT nbDefecteursMCSPTFT + 1]
+     set TotalPayOffMCSpTFT TotalPayOffMCSpTFT + payoff
+     set nbMCSpTFT nbMCSpTFT + 1
+   ]
+   
+   
    set TotalPayOff TotalPayoff + payoff
    
    ifelse CompterAgentDansCoalition numCoalition >= 2 [
      set TotalPayOffCoalition TotalPayOffCoalition + payoff
      set nbEnCoalitions nbEnCoalitions + 1
+     if hasLeader [
+       ask getLeader [set TotalTaxesPayees TotalTaxesPayees + taxe]
+     ]
      if leader [
        set TotalPayOffLeaders TotalPayOffLeaders + payoff
        set TotalTaxesLeaders TotalTaxesLeaders + taxe
@@ -453,6 +495,18 @@ to CalculerMoyennes
   set MoyennePayOff TotalPayoff / (count turtles)
   if nbcooperateurs > 0 [set MoyennePayOffCooperateurs TotalPayOffCooperateurs / nbCooperateurs]
   if nbDefecteurs > 0 [set MoyennePayOffDefecteurs TotalPayOffDefecteurs / nbDefecteurs]
+  if nbEnCoalitions > 0 [set MoyennePayOffCoalition TotalPayOffCoalition / nbEnCoalitions
+    set MoyenneTaxesPayees TotalTaxesPayees / ( nbEnCoalitions - nbLeaders  )
+  ]
+  if nbIndependants > 0 [set MoyennePayOffIndependant TotalPayOffIndependant / nbIndependants]
+  if nbLeaders > 0 [set MoyennePayOffLeaders TotalPayOffLeaders / nbLeaders  ]
+  if nbcooperateurs > 0 [set MoyennePayOffCooperateurs TotalPayOffCooperateurs / nbCooperateurs]
+  if nbDefecteurs > 0 [set MoyennePayOffDefecteurs TotalPayOffDefecteurs / nbDefecteurs]
+  if nbEnCoalitions > 0 [set MoyennePayOffCoalition TotalPayOffCoalition / nbEnCoalitions]
+  if nbIndependants > 0 [set MoyennePayOffIndependant TotalPayOffIndependant / nbIndependants]
+  if nbLeaders > 0 [set MoyennePayOffLeaders TotalPayOffLeaders / nbLeaders]
+  if nbMCSRandom > 0 [  set MoyennePayOffMCSRandom TotalPayOffMCSRandom / nbMCSRandom]
+  if nbMCSPTFT > 0 [set MoyennePayOffMCSPTFT TotalPayOffMCSPTFT / nbMCSPTFT]
   if nbEnCoalitions > 0 [set MoyennePayOffCoalition TotalPayOffCoalition / nbEnCoalitions]
   if nbIndependants > 0 [set MoyennePayOffIndependant TotalPayOffIndependant / nbIndependants]
   if nbLeaders > 0 [set MoyennePayOffLeaders TotalPayOffLeaders / nbLeaders
@@ -539,7 +593,7 @@ to MouvementCoalitions
               ask turtle numMeilleurVoisin [
                 set VoisinAUnLeader hasLeader
               ]
-              if ( (VoisinAUnLeader) and (array:item TableauCompromis numLeader < 25) ) [
+              if ( (not VoisinAUnLeader) and (array:item TableauCompromis numLeader < 25) ) [
                 DevenirIndependant 
               ]
             ]        
@@ -668,10 +722,10 @@ NIL
 1
 
 PLOT
-650
-11
-1277
-236
+648
+10
+1275
+235
 Population plot
 Ticks
 Population
@@ -728,7 +782,7 @@ NbLeadersInitialisation
 NbLeadersInitialisation
 0
 300
-45
+100
 5
 1
 NIL
@@ -743,7 +797,7 @@ TaxeLeaders
 TaxeLeaders
 5
 50
-12.6
+9.8
 0.1
 1
 %
