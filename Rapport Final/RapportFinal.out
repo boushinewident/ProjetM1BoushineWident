@@ -1,5 +1,5 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction :}{}% 1
-\BOOKMARK [0][-]{chapter.2}{La th\351orie des jeux \351volutionnaire et m\351m\351tique:}{}% 2
+\BOOKMARK [0][-]{chapter.2}{La th\351orie des jeux \351volutionnaires et m\351m\351tique:}{}% 2
 \BOOKMARK [1][-]{section.2.1}{EGT - Evolutionary Game Theory :}{chapter.2}% 3
 \BOOKMARK [1][-]{section.2.2}{M\351m\351tique :}{chapter.2}% 4
 \BOOKMARK [0][-]{chapter.3}{Syst\350me Multi-Agent :}{}% 5
@@ -7,9 +7,9 @@
 \BOOKMARK [1][-]{section.3.2}{R\350gles du jeu :}{chapter.3}% 7
 \BOOKMARK [1][-]{section.3.3}{Les \351tats d'agents :}{chapter.3}% 8
 \BOOKMARK [1][-]{section.3.4}{Formation de coalition:}{chapter.3}% 9
-\BOOKMARK [1][-]{section.3.5}{La strat\351gies de gestion : probabiliste Tit-for-tat\(PTFT\)}{chapter.3}% 10
+\BOOKMARK [1][-]{section.3.5}{Gestion de strat\351gies : probabiliste Tit-for-tat\(PTFT\)}{chapter.3}% 10
 \BOOKMARK [0][-]{chapter.4}{Impl\351mentation et exp\351rimentation :}{}% 11
 \BOOKMARK [1][-]{section.4.1}{dilemme de prisonnier Spatial \(DPS\) :}{chapter.4}% 12
-\BOOKMARK [1][-]{section.4.2}{Coalition Statique \(CS\):}{chapter.4}% 13
+\BOOKMARK [1][-]{section.4.2}{Coalition Fixe \(CF\):}{chapter.4}% 13
 \BOOKMARK [1][-]{section.4.3}{Coalition Dynamique \(CD\):}{chapter.4}% 14
 \BOOKMARK [0][-]{chapter.5}{Discussion et conclusion :}{}% 15

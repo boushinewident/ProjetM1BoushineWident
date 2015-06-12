@@ -1,0 +1,10 @@
+\begin{verbatim}
+On peut utiliser le mode verbatim avec beamer
+Mais il faut passer l'option fragile dans
+la frame correspondante.
+\end{verbatim}
+\begin{semiverbatim}
+L'environnement semiverbatim \pause permet
+de pouvoir utiliser des commandes \LaTeX et
+ecrire en verbatim.
+\end{semiverbatim}

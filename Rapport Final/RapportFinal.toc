@@ -1,16 +1,16 @@
 \select@language {french}
 \contentsline {chapter}{\numberline {1}Introduction :}{2}{chapter.1}
-\contentsline {chapter}{\numberline {2}La th\'eorie des jeux \'evolutionnaire et m\'em\'etique:}{5}{chapter.2}
-\contentsline {section}{\numberline {2.1}EGT - Evolutionary Game Theory :}{5}{section.2.1}
-\contentsline {section}{\numberline {2.2}M\'em\'etique :}{6}{section.2.2}
-\contentsline {chapter}{\numberline {3}Syst\`eme Multi-Agent :}{7}{chapter.3}
-\contentsline {section}{\numberline {3.1}R\'epartition spatiale :}{7}{section.3.1}
-\contentsline {section}{\numberline {3.2}R\`egles du jeu :}{8}{section.3.2}
-\contentsline {section}{\numberline {3.3}Les \'etats d'agents :}{10}{section.3.3}
-\contentsline {section}{\numberline {3.4}Formation de coalition:}{10}{section.3.4}
-\contentsline {section}{\numberline {3.5}La strat\'egies de gestion : probabiliste Tit-for-tat(PTFT)}{12}{section.3.5}
-\contentsline {chapter}{\numberline {4}Impl\'ementation et exp\'erimentation :}{15}{chapter.4}
-\contentsline {section}{\numberline {4.1}dilemme de prisonnier Spatial (DPS) :}{15}{section.4.1}
-\contentsline {section}{\numberline {4.2}Coalition Statique (CS):}{17}{section.4.2}
-\contentsline {section}{\numberline {4.3}Coalition Dynamique (CD):}{18}{section.4.3}
-\contentsline {chapter}{\numberline {5}Discussion et conclusion :}{22}{chapter.5}
+\contentsline {chapter}{\numberline {2}La th\'eorie des jeux \'evolutionnaires et m\'em\'etique:}{6}{chapter.2}
+\contentsline {section}{\numberline {2.1}EGT - Evolutionary Game Theory :}{6}{section.2.1}
+\contentsline {section}{\numberline {2.2}M\'em\'etique :}{7}{section.2.2}
+\contentsline {chapter}{\numberline {3}Syst\`eme Multi-Agent :}{8}{chapter.3}
+\contentsline {section}{\numberline {3.1}R\'epartition spatiale :}{8}{section.3.1}
+\contentsline {section}{\numberline {3.2}R\`egles du jeu :}{9}{section.3.2}
+\contentsline {section}{\numberline {3.3}Les \'etats d'agents :}{11}{section.3.3}
+\contentsline {section}{\numberline {3.4}Formation de coalition:}{11}{section.3.4}
+\contentsline {section}{\numberline {3.5}Gestion de strat\'egies : probabiliste Tit-for-tat(PTFT)}{14}{section.3.5}
+\contentsline {chapter}{\numberline {4}Impl\'ementation et exp\'erimentation :}{16}{chapter.4}
+\contentsline {section}{\numberline {4.1}dilemme de prisonnier Spatial (DPS) :}{16}{section.4.1}
+\contentsline {section}{\numberline {4.2}Coalition Fixe (CF):}{19}{section.4.2}
+\contentsline {section}{\numberline {4.3}Coalition Dynamique (CD):}{21}{section.4.3}
+\contentsline {chapter}{\numberline {5}Discussion et conclusion :}{26}{chapter.5}

@@ -38,49 +38,51 @@
 \tableofcontents
 
 \chapter{Introduction :}
-La théorie des jeux est un sac d'outils d'analyse conçu pour nous aider à comprendre les interactions que nous observons lorsque les décideurs interagissent \cite{osborne1994course}, cette théorie peut être appliquée a de multiples contextes tel que le contexte économique ou encore social afin d'analyser une société par exemple.
+La théorie des jeux est une boîte d'outils d'analyses, conçues pour nous aider à comprendre les interactions entres différents joueurs \cite{osborne1994course}. Cette théorie peut être appliquée à de multiples contextes tels que le contexte économique ou encore social afin d'analyser une société par exemple.
 \newline
 \newline
-Les hypothèses de base qui sous-tendent la théorie, sont les décideurs qui poursuivent des objectifs bien définis exogènes (rationnels) et tiennent compte de leurs connaissances ou des attentes du comportement des autres décideurs (ils raisonnent stratégiquement).
+Les hypothèses de base qui sous-tendent la théorie, sont les décideurs qui poursuivent des objectifs bien définis exogènes (rationnels), et tiennent compte de leurs connaissances ou des attentes du comportement des autres joueurs (ils raisonnent stratégiquement).
 \newline
 \newline
-\Crucial{La théorie des jeux} peut être coopératifs et non coopératifs. un jeu coopératif est un jeu ou les participants peuvent avoir un comportement coopératif, dans ce cas le jeu est une compétition entre les coalitions de joueurs , plutôt qu'entre les joueurs individuels, pour appréhender la coordination entre les joueurs on doit utiliser le système multi-agent (SMA)\footnote{Le système multi-agents est un système composé d'agents autonomes, qui peuvent s'organiser pour former des coalitions afin de maximiser leur gain ainsi que celui de leur coalition.}comme outil dans notre thématique de recherche.
+\Crucial{La théorie des jeux} peut être coopérative ou non coopérative. Un jeu coopératif est un jeu où les participants peuvent avoir un comportement coopératif, c'est-à-dire jouer en tant qu'un groupe de joueurs appelé "coalition". Dans ce cas le jeu est une compétition entre les coalitions de joueurs , plutôt qu'entre les joueurs individuels, pour appréhender la coordination entre les joueurs on doit utiliser le système multi agent (SMA)\footnote{Le système multi-agents est un système composé d'agents autonomes, qui peuvent s'organiser pour former des coalitions afin de maximiser leurs gains ainsi que celui de leur coalition.}comme outil dans notre thématique de recherche.
 \newline
 \newline
-Les modèles de la théorie des jeux sont des représentations très abstraites de classes de situations de la vie réelle. Leur abstraction leur permet d'être utilisés pour étudier un large éventail de phénomènes. Par exemple, la théorie de l'équilibre de Nash a été utilisée pour étudier la concurrence oligopolistique et politique.
+Les modèles de la théorie des jeux sont des représentations très abstraites de classes de situations de la vie réelle. Leurs abstractions leur permettent d'être utilisés pour étudier un large éventail d'interactions. Par exemple, la théorie de l'équilibre de Nash a été utilisée pour étudier la concurrence oligopolistique et politique \cite{yildizoglu2003introduction}.
 \newline
 \newline
-Dans de nombreux jeux, cependant, il n'y a pas de stratégies dominées \footnote{On dit qu'une stratégie est dominée pour un joueur donné s'il existe au moins une autre stratégie telle que, quelles que soient les stratégies adoptées par les autres joueurs, cette autre stratégie est toujours au moins aussi bonne que la première et strictement meilleure dans au moins l'une des situations [Wikipedia].}, comme dans les cas que nous allons présenter dans ce travail , car ces stratégies dominées faussent les résultats étant données qu'elles minimisent forcément les gains obtenus par les agents qui adoptent cette stratégie.
+Dans de nombreux jeux, cependant, il n'y a pas de stratégies dominées \footnote{On dit qu'une stratégie est dominée pour un joueur donné s'il existe au moins une autre stratégie telle que, quelles que soient les stratégies adoptées par les autres joueurs, cette autre stratégie est toujours au moins aussi bonne que la première et strictement meilleure dans au moins l'une des situations [Wikipedia].}, comme dans les cas que nous allons présenter dans ce travail , car ces stratégies dominées faussent les résultats étant donné qu'elles minimisent forcément les gains obtenus par les agents qui adoptent cette stratégie.
 \newline
 \newline
-Le concept central de l'équilibre de Nash recommande une stratégie pour chaque joueur . pour ne pas le permettre de dévier sa stratégie de façon unilatérale, il est raisonnable pour chaque joueur à attendre ses adversaires à suivre la recommandation ainsi\cite{Theodore2001Theory}.
+Le concept central de l'équilibre de Nash recommande une stratégie pour chaque joueur . Pour ne pas lui permettre de dévier sa stratégie de façon unilatérale, il est raisonnable pour chaque joueur d'attendre ses adversaires et de suivre la recommandation ainsi\cite{Theodore2001Theory}.
 \newline
 \newline
 Le dilemme du prisonnier est un jeu classique qui représente une variété de situations stratégiques.
 \newline
 \newline
-dans ce jeu, il y a seulement deux prisonniers soupçonnés d'un crime sont mis dans des cellules séparées , et chacun d'eux ne dispose que de deux actions possibles.
+Dans ce jeu, il y a seulement deux prisonniers soupçonnés d'un crime qui sont mis dans des cellules séparées , et chacun d'eux ne dispose que de deux actions possibles.
 \newline
 \newline
 Les deux prisonniers sont interrogés sur leur culpabilité ou l'innocence d'un crime.
 \newline
 \newline
-Ils ont un choix soit d'avouer le crime et accepter les conséquences , ou de nier toute implication et espèrent que leur partenaire fait de même.
+Ils ont le choix soit d'avouer le crime et accepter les conséquences , ou de nier toute implication en espérant que leur partenaire fait de même.
 \newline
 \newline
-La figure ~\ref{fig:DilemmeP} montre les gains mesuré en termes d'années qui en résultent dans ce jeu.
+La figure ~\ref{fig:DilemmeP} montre les gains mesurés en terme d'années de prisons écopés a l'issue de ce jeu.
 \newline
 \begin{table}[htbp]
 \begin{center}
 \begin{minipage}[t]{.4\linewidth}
 \setlength{\doublerulesep}{\arrayrulewidth}
-\begin{tabular}{|l||l|l|}
+\begin{tabular}{|l|l||l|l|}
 \hline
-\rotatebox{45}{I  /  II\,} & C & D \\
-\hline\hline
-C & \rotatebox{45}{ 10 / 10 } & \rotatebox{45}{ 0 / 20 }\\
-\hline
-D & \rotatebox{45}{ 20 / 0 } & \rotatebox{45}{ 1 / 1 }\\
+& & \multicolumn{2}{l|}{Florian} \\
+\cline{2-4}
+& & Trahir (D) & Coopérer (C) \\
+\cline{2-4}\cline{2-4}
+\multirow{2}{*}{Saloua}&Trahir (D) & \rotatebox{45}{ 10 / 10 } & \rotatebox{45}{ 0 / 20 }\\
+\cline{2-4}
+&Coopérer (C) & \rotatebox{45}{ 20 / 0 } & \rotatebox{45}{ 1 / 1 }\\
 \hline
 \end{tabular}
 \end{minipage}
@@ -88,54 +90,83 @@ D & \rotatebox{45}{ 20 / 0 } & \rotatebox{45}{ 1 / 1 }\\
 \end{table}
 
 \begin{figure}[htbp]
-\caption{montre les gains qui en résultent dans ce jeu , Chaque prisonnier dispose de deux stratégies, appelées «coopérer» (avouer) et «Trahir » (nier), qui sont étiquetés C et D , La combinaison de la stratégie (C ; C) a gain de 10 ans pour chaque joueur , et la combinaison de ( D ; D ) donne à chaque joueur 1 an, La combinaison (C; D) les résultats 0 pour le joueur I et 20 pour le joueur II et quand la stratégie (D , C) est jouée le joueur I a 20 ans et le joueur II a 0}
+\caption{montre les gains qui en résultent dans ce jeu , chaque prisonnier dispose de deux stratégies, appelées «coopérer»(nier)  et «Trahir »(avouer) , qui sont étiquetés C et D , la combinaison de la stratégie (D ; D) a gain de 10 ans pour chaque joueur , et la combinaison de ( C ; C ) donne à chaque joueur 1 an, la combinaison (D; C) les résultats 0 pour le joueur I et 20 ans pour le joueur II et quand la stratégie (C , D) est jouée le joueur I a 20 ans et le joueur II à 0 . Plus on maximise notre gain et moins de temps on ira en prison.}
 \label{fig:DilemmeP}
 \end{figure}
-Les Prisonniers sont détenus dans une pièce séparée ne peuvent pas communiquer , chacun va prendre en compte l'action probable de l'autre lors de l?interrogation , ce qui veut dire que chacun d'eux a des informations incomplètes sur les intentions de l'autre, ils peuvent soit nier ou avouer .
+Les prisonniers sont détenus dans une pièce séparée ne peuvent pas communiquer , chacun va prendre en compte l'action probable de l'autre lors de l'interrogation , ce qui veut dire que chacun d'eux a des informations incomplètes sur les intentions de l'autre, ils peuvent soit nier soit avouer .
 \newline
 \newline
-Dans ce cas chaque prisonnier demande la meilleur stratégie pour lui . l'équilibre arrive quand chaque prisonnier prend des décisions maximisant ces résultats. et la stratégie dominante pour chacun des prisonnier et d'avouer puisque ça fait réduire le nombre moyen d'années \cite{John:Online}.
+Dans ce cas chaque prisonnier demande la meilleure stratégie pour lui . L'équilibre arrive quand chaque prisonnier prend des décisions maximisant ces résultats , et la stratégie dominante pour chacun des prisonniers et d'avouer(Trahir) puisque ça fait réduire le nombre moyen d'années \cite{John:Online}.
 \newline
 \newline
-Une version spatiale intéressante du dilemme  du prisonnier avait été suggéré et profondément analysé par Nowal et d'autres auteurs [**************] pour essayer de comprendre le rôle des interactions locales dans le maintien de la coopération.
+Une version spatiale intéressante du dilemme du prisonnier avait été suggérée et profondément analysée par Nowal et d'autres auteurs \cite{Schweitzer:2002p5030}\cite{Nowak1992}\cite{Langer:2008p1595} , pour essayer de comprendre le rôle des interactions locales dans le maintien de la coopération.
 \newline
 \newline
-Notre travail met l'accent sur cette distribution spatiale et la fréquence globale des agents qui jouent le dilemme du prisonnier spatiale avec la formation de la coalition le long des générations de coopérateurs et de traîtres au moyen de la simulation informatiques et théorie de jeux évolutionnaire \cite{smith1982evolution} .
+Notre travail met l'accent sur cette distribution spatiale, et la fréquence globale des agents qui jouent le dilemme du prisonnier spatial avec la formation de la coalition le long des générations de coopérateurs, et de traîtres aau moyen de la simulation informatique et théorie de jeux évolutionnaires \cite{smith1982evolution} .
 \newline
 \newline
-Nous considérons une population d'agents placés sur un réseau carré pour faire une simulation. L?interaction entre les agents est modélisée comme un jeu N-personnes , soit N(agent) interagissant simultanément. Chaque agent peut se comporter comme un Traître(D) ou un Coopérateur(C),il ne peut interagir qu'avec ses voisin, mais il peuvent aussi joindre ou quitter ou guider une coalition c'est l'agent chef qu'on appel (Leader) qui décide la stratégie du groupe.les agents peuvent être imiter par les voisins.
+Nous considérons une population d'agents placés sur un réseau carré pour faire une simulation. L'interaction entre les agents est modélisée comme un jeu N-personnes , soit N(agent) interagissant simultanément . Chaque agent peut se comporter comme un Traître(D) ou un Coopérateur(C) , il ne peut interagir qu'avec ses voisins, mais ils peuvent aussi joindre ou quitter ou guider une coalition . C'est l'agent chef qu'on appelle (Leader) qui décide la stratégie du groupe , les agents peuvent être imités par leurs voisins.
 \newline
 \newline
-la dynamique de la coalition sont organisées autour de deux axes. D'une part, les agents obtiennent un pourcentage de compromis lors de leur coopération avec d'autres agents. D'autre part, les Leaders imposent des taxes aux autres agents appartenant à leurs coalitions. Ces deux règles et leurs paramètres associés guident la formation de la coalition et l'évolution du jeu. 
-\cite{Burguillo-Rial:2009:MFD:1558013.1558073}.
+Les dynamiques de la coalition sont organisées autour de deux axes. D'une part, les agents obtiennent un pourcentage de compromis lors de leurs coopérations avec d'autres agents. D'autre part, les Leaders imposent des taxes aux autres agents appartenant à leurs coalitions. Ces deux règles et leurs paramètres associés guident la formation de la coalition et l'évolution du jeu \cite{Burguillo-Rial:2009:MFD:1558013.1558073}.
 \newline
 \newline
-Le chapitre \textbf{\hyperref[Fraise]{2} }introduit la théorie des jeux évolutionnaires et la mémétique en rapport avec notre modèle, le chapitre \textbf{\hyperref[nectarine]{3} } présente La simulation Multi-agent pris en compte dans notre travail , le chapitre \textbf{\hyperref[cerise]{4} } présente les résultats des simulations obtenus et puis le \textbf{\hyperref[figue]{dernière} } chapitre souligne les conclusions.
+Le chapitre \textbf{\hyperref[Fraise]{2} }introduit la théorie des jeux évolutionnaires et la mémétique en rapport avec notre modèle, le chapitre \textbf{\hyperref[nectarine]{3} } présente La simulation Multi-agent prise en compte dans notre travail , le chapitre \textbf{\hyperref[cerise]{4} } présente les résultats des simulations obtenus et puis le \textbf{\hyperref[figue]{dernier} } chapitre souligne les conclusions.
+\newline
+\newline
+\newline
+\newline
+\newline
+\newline
+\newline
+\newline
 \section*{organisation du projet :}
-TACHES 
-compréhension du sujet, apprentissage de netlogo, Codage, Analyse des courbes, rédaction du rapport 
-Pour chaque tache donner un nombre de jours
+Afin de nous organiser et mener à bien le projet nous avons découpé le projet en différentes taches  et avons attribué un temps à chaque tache : 
+\newline
+Temps disponible pour le projet : 70 jours.
+\newline
+Répartition du temps selon les taches :
+\newline
 
-OUTILS : 
-Outils de Messagerie : communication rapide .
-GIT : partage de fichiers
 
 
-***************************
-\chapter{La théorie des jeux évolutionnaire et mémétique:}
+\begin{tabular}{ l c r }
+  compréhension du sujet :  & Estimation : 25 jours	 & Réel :  35 jours \\
+   Apprentissage de netlogo : 	 & Estimation : 10 jours & Réel : 6 jours \\
+   Codage :   & Estimation : 10 jours & Réel : 12 jours \\
+   Analyse des courbes :	& Estimation : 4 jours & Réel : 3 jours \\
+   Rédaction du rapport : & Estimation : 10 jours & Réel : 12 jours \\
+   Préparation de la soutenance : & Estimation : 2 jours & Réel : 2 jours \\
+   Total jours : & 60 jours  & 70 jours \\
+ \end{tabular}
+ \newline
+ \newline
+Projet terminé à temps.
+ \newline
+ \newline
+Outils utilisés : 
+\newline
+ \newline
+* Outils de messagerie instantanée pour communiquer rapidement et s'échanger les idées.
+ \newline
+* Utilisation de GIT afin de partager les fichiers de codage ainsi que les différentes versions du rapport.
+
+
+
+\chapter{La théorie des jeux évolutionnaires et mémétique:}
 \label{Fraise}
-	Cette section présente deux concepts importants en rapport avec notre travail, la première est la théorie des jeux évolutionnaire qui décrit l?Interaction des stratégies dans les population. et la deuxième est la mémétique qui décrit les stratégies d'imitation dans les population des jeux.
+	Cette section présente deux concepts importants en rapport avec notre travail, la première est la théorie des jeux évolutionnaire qui décrit l'interaction des stratégies dans les populations, et la deuxième est la mémétique qui décrit les stratégies d'imitation dans les populations des jeux.
 \section{EGT - Evolutionary Game Theory :}
-	Dans la première partie nous avons développé les idées de base sur la théorie des jeux dans lequel les joueurs prennent des décisions individuelles, et le gain de chaque joueur dépend des décisions prises par tous.
+	Dans la première partie nous avons développé les idées de base sur la théorie des jeux dans lequel les joueurs prennent des décisions individuelles, et le gain de chaque joueur dépend de sa décision.
 	\newline
 	\newline
-	Dans Cette partie nous explorant la notion théorie de jeu révolutionnaire , ce qui montre que les idées de base de la théorie des jeux peuvent être appliquées même aux situations dans lesquelles aucun individu ne peux raisonner ouvertement , plus précisément dans les jeux évolutionnaires on a pas que deux joueur mais une population de joueur ~\cite{MonProf} il n'y a plus de choix , les joueurs ne peuvent plus changer de stratégie , donc ils sont comme des automates utilisant la même stratégie
+	Dans Cette partie nous explorons la notion théorie de jeu évolutionnaire , ce qui montre que les idées de base de la théorie des jeux peuvent être appliquées même aux situations dans lesquelles aucun individu ne peut raisonner ouvertement , plus précisément dans les jeux évolutionnaires on n'a pas que deux joueurs mais une population de joueurs ~\cite{MonProf} il n'y a plus de choix , les joueurs ne peuvent plus changer de stratégie , donc ils sont comme des automates utilisant la même stratégie.
 	\newline
 	\newline
-	présente le concept de EGT décrit l'interaction des stratégies des populations jouant les dilemmes classiques.l'effectif de chaque stratégie augmente et diminue selon le score \cite{Burguillo-Rial:2009:MFD:1558013.1558073}.
+ Le concept des Théorie des jeux évolutionnaires décrit l'interaction des stratégies des populations jouant les dilemmes classiques . L'effectif de chaque coalition augmente et diminue En fonction des mouvements de coalitions des agents, dépendant du score obtenu par les agents et du compromis liant chaque agent \cite{Burguillo-Rial:2009:MFD:1558013.1558073}.
 	\newline
 	\newline
-	Le Jeu $\cal G$ est défini par  le tuple suivant[Hamila]
+	Le Jeu $\cal G$ est défini par  le tuple suivant \cite{conf:jfsma:HamilaMSM09}:
 
 	$<Ag,\{Ai:i = 1 .... |Ag|\}   ,   \{Ri : i = 1 .... |Ag|\} >$
 
@@ -149,14 +180,14 @@ GIT : partage de fichiers
 Une stratégie ne peut être évaluée que si les autres stratégies sont déjà connues .
 	\newline
 	\newline
-Dans la théorie de jeu comportementale une Stratégie Evolutivement Stable (ESS) est un cas particulier d'équilibre de Nash (Évolutif) stable, signifie une fois fixé dans une population , la sélection naturelle est suffisante pour empêcher des stratégies alternatives(mutante) d'envahir avec succès tel que, dans une grande population de joueurs se rencontrant aléatoirement, plusieurs stratégies peuvent coexister chacune possédant une fréquence d'équilibre propre \cite{Burguillo-Rial:2009:MFD:1558013.1558073}.
+Dans la théorie de jeu comportementale une Stratégie Évolutivement Stable (ESS) est un cas particulier d'équilibre de Nash (Évolutif) stable, signifie une fois fixée dans une population , la sélection naturelle est suffisante pour empêcher des stratégies alternatives(mutante) d'envahir avec succès tel que, dans une grande population de joueurs se rencontrant aléatoirement, plusieurs stratégies peuvent coexister chacune possédant une fréquence d'équilibre propre \cite{Burguillo-Rial:2009:MFD:1558013.1558073}.
 \section{Mémétique :}
-	Le concept mémétique, décrit les stratégies d'imitation dans les populations , les individus et les groupes mois efficaces, imitent le comportement des agents les plus efficaces afin d'améliorer leurs objectifs, en se basant sur un algorithme mémétique\footnote{Les algorithmes mémétiques sont une hybridation entre les algorithmes de recherche locale et les algorithmes génétiques. introduits par Dawkins .Ils sont appelés aussi algorithmes génétiques hybrides, et Recherche locale Hybrides. }\cite{Burguillo-Rial:2009:MFD:1558013.1558073}.
+	Le concept mémétique, décrit les stratégies d'imitation dans les populations , les individus et les groupes moins efficaces, imitent le comportement des agents les plus efficaces afin d'améliorer leurs objectifs, en se basant sur un algorithme mémétique\footnote{Les algorithmes mémétiques sont une hybridation entre les algorithmes de recherche locale et les algorithmes génétiques. introduits par Dawkins .Ils sont appelés aussi algorithmes génétiques hybrides, et Recherche locale Hybrides. }\cite{Burguillo-Rial:2009:MFD:1558013.1558073}.
 
 
 \chapter{Système Multi-Agent :}
 \label{nectarine}
-Cette partie présente quartes approches pris en compte pour effectuer la simulation : premièrement la répartition spatiale , comme on parle d'un jeu spatial , ça nous permet avoir une structure spatiale de population, deuxièmement les règles du jeu, pour gérer les interactions entre les agents , troisièmement  des états d'agents comme chacun de ces agent aura un rôle spécial qui lui sera définit dès début de chaque tour ,  et quatrièmement de la formation de coalition qui décrit le processus de changement de coalitions des agents .
+Cette partie présente quatre approches pour effectuer la simulation : premièrement la répartition spatiale , comme on parle d'un jeu spatial , ça nous permet d'avoir une structure spatiale de population, deuxièmement les règles du jeu, pour gérer les interactions entre les agents , troisièmement  des états d'agents comme chacun de ces agents aura un rôle spécial qui lui sera défini dès débuts de chaque tour ,  et quatrièmement de la formation de coalition qui décrit le processus de changement de coalition des agents .
 \section{Répartition spatiale :}
 \vspace{15 mm}
 \begin{center}
@@ -176,7 +207,7 @@ Nous considérons un réseau carré à deux dimensions, constitué de N noeuds, et qu
 	Le NR s'incrémente par tranche de 0,5 plus le NR est élevé, plus l'agent rencontrera un grand nombre d'agents à chaque tour, ainsi si le NR est de 1.5, il rencontrera les 4 agents présents à {\em NR = 1 + les 4 agents en diagonale } . 
 	\newline
 	\newline
-	Le NR peut être assimilé au rayon mathématique, plus il est grand et plus le cercle partant de l'agent atteint un grand nombre d'autres agents.
+	Le NR peut être assimilé au rayon mathématique, plus il est grand , plus le cercle partant de l'agent atteint un grand nombre d'autres agents.
 	\newline
 	\newline
 	Dans notre cas en se basant sur la figure~\ref{fig:spatial}:
@@ -188,7 +219,10 @@ Nous considérons un réseau carré à deux dimensions, constitué de N noeuds, et qu
 %\subsection{états des agents :}
 \section{Règles du jeu :}
 
-Chaque cellule de notre distribution spatiale est dirigée par un agent qui suivra l'une des deux stratégies de base : la défection D ou la coopération C ,est en interaction avec un autre agent de son voisinage qui doit choisir aussi une action, le choix effectué par chaque agent est inconnu par l'agent adverse. A la fin du tour et une fois le choix des deux agents est connu, un gain  est attribué à chaque agent , ce gain est défini dans la matrice de payoff.
+Chaque cellule de notre distribution spatiale est dirigée par un agent qui suivra l'une des deux stratégies de base : la défection D ou la coopération C .
+Ces agents jouent contre chacun de leurs voisins , qui ont eut aussi une stratégie.
+\newline
+ Le choix effectué par chaque agent est inconnu par l'agent adverse. A la fin de chaque tour et une fois le choix des deux agents est connu, un gain est attribué à chaque agent , ce gain est défini dans la matrice payoff (matrice de gain).
 \newline
 \begin{table}[htbp]
 \begin{center}
@@ -221,7 +255,7 @@ D & 5,0 & 1,1 \\
 \end{table}
 
 \begin{figure}[htbp]
-\caption{Matrice dilemme du prisonnier classique.}
+\caption{Matrice dilemme du prisonnier classique appliquée dans notre simulation.}
 \label{fig:dessin}
 \end{figure}
 On considère R = 3 et P = 1,en variant T et S on peut avoir dilemmes suivants\footnote{Les lettres correspondent  à R :  récompense, T : trahison , S : dupe et P : punition }:
@@ -239,16 +273,16 @@ On considère R = 3 et P = 1,en variant T et S on peut avoir dilemmes suivants\fo
 - {\em R,R < T,S ET S,T > P,P  } ce qui représente le {\em Co-Existence}.
 \newline
 \newline
-	Le modèle de simulation présenté dans notre contexte est le modèle de jeu du dilemme du prisonnier spatiale .
+	Le modèle de simulation présenté dans notre contexte est le modèle de jeu du dilemme du prisonnier spatial .
 	\newline
 	\newline
 	Les analyses montrent que la défection est une stratégie dite stable évolutionnaire dans le dilemme de prisonnier "one-shot".
 	\newline
 	\newline
-	Si les agents ne regardent que leur propre intérêt personnel, il est préférable pour eux de défécter alors que si on regarde en terme de gain cumulé par l'ensemble des agents, il est plus bénéfique de coopérer. 
+	Si les agents ne regardent que leurs propres intérêts personnels, il est préférable pour eux de trahir alors que si on regarde en terme de gain cumulé par l'ensemble des agents, il est plus bénéfique de coopérer.
 	\newline
 	\newline
-	Dans notre cas c'est un jeu entre n joueurs ,on suppose que chaque agent Ai interagit seulement avec les agents de son voisinage.le gain pour chaque agent dépend du nombre de coopérateurs dans son voisinage . voir tableaux (~\ref{fig:TabCoop} et ~\ref{fig:TabDef}). on fait la réinitialisation du gain de chaque cellule au début de chaque tour\cite{Burguillo-Rial:2009:MFD:1558013.1558073}.
+	Dans notre cas c'est un jeu entre n joueurs ,on suppose que chaque agent Ai interagit seulement avec les agents de son voisinage . le gain de chaque agent dépend du nombre de coopérateurs dans son voisinage . voir tableaux (~\ref{fig:TabCoop} et ~\ref{fig:TabDef}). on fait la réinitialisation du gain de chaque cellule au début de chaque tour\cite{Burguillo-Rial:2009:MFD:1558013.1558073}.
 	
 \begin{center}
 \begin{minipage}[t]{.4\linewidth}
@@ -308,76 +342,89 @@ Ai et Aj suivent des règles simples pour prendre des  décisions concernant la fo
 \newline
 \newline
 $\Rightarrow$
-  Indépendant: Le propriétaire peut soit agir comme un C ou D  à l'égard de ses voisins, Après chaque jeu, il peut se joindre à une coalition ou rester indépendant.  Les stratégies des agent sont fixes et fixées au début de chaque tour. Dans ce travail, la méthode de choix de stratégie possible est le probabilistic Tit-for-tat (pTFT) {\em page~\pageref{PTFT}.}
+  Indépendant: Le propriétaire peut soit agir comme un C ou D  à l'égard de ses voisins, Après chaque jeu, il peut se joindre à une coalition ou rester indépendant.  Les stratégies des  agents sont fixes sont fixées au début de chaque tour.
 \newline
 \newline
 $\Rightarrow$
-  Coalition Part :  L'agent coopère toujours avec les voisins appartenant à sa coalition et prend sa décision de coopération ou de défection envers les voisins indépendants selon la décision prise par le leader de la coalition. En fonction du résultat obtenu à la fin du tour , il peut devenir agent indépendant si son compromis avec son leader est inférieur à un certain seuil ou si il n'est pas le meilleur de son voisinage.
+  Coalition Part :   L'agent se voit attribuer une stratégie définie par son leader.
+Un agent faisant partie d'une coalition coopère toujours avec les voisins appartenant à sa coalition et utilise la stratégie donnée par le leader (de coopération ou de trahison) pour interagir avec ses voisins ne faisant pas partie de sa coalition. En fonction du résultat obtenu à la fin du tour , il peut devenir agent indépendant si son compromis avec son leader est inférieur à un certain seuil ou s'il n'est pas le meilleur de son voisinage. 
 \newline
 \newline
 $\Rightarrow$
-  Leader :  agit comme ses parties le leader. Décide la stratégie commune pour le prochain tour , impose également un pourcentage de l'impôt à la récompense des agents «Coalition Part» à chaque itération, car il représente la coalition toute entière au cours de la procédure de négociation avec l'État, Ne peut  de devenir indépendant à tout moment: il peut le devenir seulement quand il n'y a pas de « Coalition part » à la coalition qu'il dirige. 
+  Leader :  C'est le chef de la coalition. Il décide la stratégie commune pour le prochain tour et impose également un pourcentage de taxe au gain des agents «Coalition Part» à chaque fin de tour , car il représente la coalition tout entière au cours de la procédure de négociations avec l'État. Il ne peut de devenir indépendant à tout moment : il peut le devenir seulement quand il n'y a pas de « Coalition part » à la coalition qu'il dirige, ce n'est donc pas un choix de sa part mais plutôt une circonstance s'imposant à lui.. 
   \newline
   \newline
-  Les membres de la coalition peuvent être soit isolés, soit non isolé, ils sont considérés comme isolés si aucun de leur voisin ne fait partie de leur coalition.
+  Les membres de la coalition peuvent être soit isolés, soit non isolé. Ils sont considérés comme isolés si aucun de leurs voisins ne fait partie de leurs coalitions.
   \newline
 \section{Formation de coalition:}
 Dans notre cas, comme on s'est basé sur les travaux de Juan.C \cite{Burguillo-Rial:2009:MFD:1558013.1558073}, le modèle de formation de coalition est adapté à un jeu spatial du dilemme du prisonnier et procède comme suite :
 \newline
 \newline
-Il existe un lien entre chaque agents du jeu représenté par un score variant selon ces règles 
-\newline
-\newline
--Chaque agent de la cellule {\em Ai} augmente son pourcentage de compromis avec un agent voisin {\em Aj} de 10\% lorsque {\em Aj}  se comporte comme un coopérateur et réduit son compromis de 10\% lorsque {\em Aj} se comporte comme un traître.
-\newline
-\newline
-Quand une cellule appartient à une coalition, elle coopère avec les autres cellules de la coalition, et comme le leader décide (C ou D) avec les cellules en dehors de sa coalition.
-\vspace{5 mm}
-\begin{center}
-\includegraphics[width=110mm,height=130mm]{AlgoCoal.jpg}
-\end{center}
-\begin{figure}[htbp]
-\caption{Les règles d'agents pour la formation de coalition et l'indépendance \cite{Burguillo-Rial:2009:MFD:1558013.1558073}.}
-\label{fig:algocoal}
-\end{figure}
-
-L'algorithme peut être expliqué comme suite:
-Il y a deux alternatives, soit l'agent Ai a un leader ou l'agent Ai est indépendant. si l'agent Ai a un chef, trois possibilités sont vérifiés:
-\newline
-\newline
-1- si l'agent Ai est isolé il devient indépendant. cette modèle de situation où il n'y a pas d'autre cellule appartenant à la coalition dans son voisinage.
-\newline
-\newline
-2-si l'agent Ai est pas isolé , et le gain de Ai est le meilleur dans son voisinage est supérieur à zero, alors Ai augmente son compromis avec son chef de 10\%.
-\newline
-\newline
-3-si le gain de Ai est pas le meilleur et son leader est pas Am, alors Ai peut prendre plusieurs décisions. tout d'abord, Ai réduit son compromis avec son chef de 10, si le gain de Ai est le pire dans son voisinage, ou son compromis avec Am est supérieur à 75, il rejoint la coalition de Am sachant que Am ne peut pas être un leader. Sinon si Am est une cellule indépendante et le compromis de Ai avec son chef est inférieur à 25 alors il déclare son indépendance. enfin, si Ai est indépendant. il a le pire gain ou il est pas le meilleur mais son compromis avec Am est supérieur à 75 puis elle rejoint la coalition de Am.
-\newline
-\newline
-Un Leader peut imposer un pourcentage d'impôt sur le revenu de les cellules de sa coalition. 
-\newline
-\newline
-cela signifie qu'un leader augmente son revenu à un montant qui dépend du pourcentage de la taxe , le nombre de cellules font partie de sa coalition , le revenu de chacune de ces cellules.
-\newline
-\newline
-Un grand pourcentage de taxe , signifie plus de revenus pour le leader à court terme, mais cela peut provoquer faillite pour les cellules de sa coalition qui peuvent devenir indépendants.
-\newline
-\newline
-En gros on peut dire que chaque agent choisit sa stratégie pour le tour  en fonction de son mode de choix de stratégie ainsi que par transmission de stratégie ( pour les membres de la coalition).
+Chaque agent joue contre ses voisins pour obtenir un gain, et ce gain est réduit par la taxe pour les agents qui font partie d'une coalition . Puis les agents changent de coalition en fonction des gains obtenus. 
 \newline
 \newline
 Ensuite chaque agent joue contre ses voisins pour obtenir un gain, que ce gain est réduit par la taxe pour les agents qui font partie d'une coalition et augmenté pour le leader de la coalition qui récolte la taxe.
 Puis les agents changent de coalition en fonction des gains obtenus.
 \newline
 \newline
-\section{La stratégies de gestion : probabiliste Tit-for-tat(PTFT)}
+Il existe un lien entre chaque agent du jeu représenté par un score variant selon les règles suivantes :
+\newline
+\newline
+Chaque agent Ai augmente son score de compromis avec un agent voisin Aj de 10 , lorsque Aj se comporte comme un coopérateur et réduit son compromis de 10 lorsque Aj se comporte comme un traître .
+\newline
+\newline
+Quand un agent appartient à une coalition, il coopère avec les autres agents de sa coalition, et utilise la stratégie décidée par son leader (C ou D) avec les agents ne faisant pas partie de sa coalition.
+\vspace{5 mm}
+\begin{center}
+\includegraphics[width=110mm,height=130mm]{AlgoCoal.jpg}
+\end{center}
+\begin{figure}[htbp]
+\caption{Les règles utilisées par les agents pour les mouvements de coalition .\cite{Burguillo-Rial:2009:MFD:1558013.1558073}.}
+\label{fig:algocoal}
+\end{figure}
 
-Pour gérer les stratégies d'agents, nous utilisons cette méthodes:
+L'algorithme peut être expliqué comme suite:
+Il y a deux alternatives, soit l'agent Ai a un leader ou l'agent Ai est indépendant. si l'agent Ai a un chef, quatre possibilités sont vérifiés:
+\newline
+\newline
+1- si l'agent Ai est isolé il devient indépendant , cette situation arrive quand aucun des voisins de Ai ne fait partie de la coalition de l'agent Ai.
+\newline
+\newline
+2-si l'agent Ai n'est pas isolé , et que le gain de Ai est le meilleur dans son voisinage et est supérieur à zero , alors Ai augmente son compromis avec son chef de 10 car il trouve que la stratégie dictée par son leader est efficace .
+\newline
+\newline
+3-si le gain de Ai n'est pas le meilleur et que son leader n'est pas le meilleur des voisins (Am), alors Ai réduit son compromis avec son chef de 10 , puis Ai peut prendre plusieurs décisions : 
+Tout d'abord, si le gain de Ai est le pire dans son voisinage, ou que son compromis avec Am est supérieur à 75, il rejoint la coalition de Am . 
+Sinon , si Am est une cellule indépendante et que le compromis de Ai avec son chef est inférieur à 25 alors il déclare son indépendance. 
+\newline
+\newline
+4- Si Ai est indépendant . Il peut rejoindre la coalition de Am si il a le pire gain de son voisinnage ou si il n'est pas le meilleur mais que son compromis avec Am est supérieur à 75.
+\newline
+\newline
+Un leader peut imposer un pourcentage d'impôt sur le gain obtenu par les agents de sa coalition. 
+\newline
+\newline
+Cela signifie qu'un leader augmente son revenu à un montant qui dépend du pourcentage de la taxe , du nombre d'agents faisant partie de sa coalition ,et du gain de chacune de ces cellules .
+GainLeader = G+Somme de i allant de 0 à nombre de coalition part dans sa coalition de (Gi*Taxe)
+Ou G=gain obtenu par le leader suite aux parties jouées contre ses voisins.
+\newline
+Gi= le gain obtenu à l'issue du tour par l'agent Ai.
+\newline
+Taxe = la taxe prélevée par le leader, qui est un pourcentage.
+\newline
+\newline
+Un grand pourcentage de taxe , signifie plus de revenus pour le leader à court terme, mais cela peut provoquer faillite pour les agents de sa coalition qui peuvent devenir indépendants. 
+\newline
+\newline
+
+\section{Gestion de stratégies : probabiliste Tit-for-tat(PTFT)}
+
+Pour gérer les stratégies d'agents, nous utilisons cette méthode:
 \label{PTFT}
 Le pTFT forme une gestion stratégie mémétique qui se base sur l'imitation de la stratégie des voisins dans le dernier tour.
 \newline
 \newline
-Il permet de reproduire l'action la plus effectuée dans le voisinage en comptant le nombre de défections sur le nombre de voisins sur le tour précédent.
+Il permet de reproduire l'action la plus effectuée dans le voisinage , en comptant le nombre de défections sur le nombre de voisins sur le tour précédent.
 \newline
 \newline
 Ainsi, si ¼ des voisins a coopéré au tour t-1, alors nous aurons  ¼  de chances de coopérer au tour t.
@@ -422,8 +469,8 @@ Dans la terminologie \cite{axelrod2006evolution} d'Axelrod ,une machine gentille
 \caption{Simulation Dilemme du Prisonnier sans coalition.}
 \end{figure}
 \end{center}
-Dans cette espace, un agent est représenté par un avion, 
-sa couleur est en fonction de sa stratégie, les agents qui coopèrent sont rose et les agents qui trahissent sont noir.
+Dans cet espace, un agent est représenté par un avion, 
+sa couleur est en fonction de sa stratégie, les agents qui coopèrent sont en rose et les agents qui trahissent sont en noir.
 \begin{center}
 \includegraphics[width=140mm,height=60mm]{DilemmeMoyennePayOff.jpg}
 
@@ -434,33 +481,47 @@ sa couleur est en fonction de sa stratégie, les agents qui coopèrent sont rose e
 Courbe constante , gains plus élevés pour les traîtres, c'est en relation avec la matrice des gains.
 \newline
 \newline
-Un agent qui coopère a 1 chance sur 2 de tomber sur un coopérateur et 1 chances sur 2 de tomber sur un traître, Sur un total de 4 voisins ce qui nous donne: 
+Un agent qui coopère a 1 chance sur 2 de tomber sur un coopérateur et 1 chance sur 2 de tomber sur un traître, Sur un total de 4 voisins ce qui nous donne: 
 \newline
 \newline
 $ MoyenneDeGainParTour=nbVoisins*((probabiliteCooperation*GainSiCoopere) + (probabiliteDefection*GainSiDefecte)) $
 \newline
 \newline
-Ainsi pour un coopérateur: $4 * ((0.5*3)+(0))= 6$
+Pour un coopérateur: $4 * ((0.5*3)+(0))= 6$
 \newline
 \newline
-Pour un traître : $4 *((0.5*5)+(0.5*1)=12$
+Ainsi pour un traître : $4 *((0.5*5)+(0.5*1)=12$
 \begin{center}
 \includegraphics[width=140mm,height=90mm]{Dilemme pTFT Random.jpg}
 \begin{figure}[htbp]
 \caption{Gain stratégie Random/pTFT Dilemme du prisonnier.}
 \end{figure}
 \end{center}
-*************************************
-\newline
+
 Comme on peut le voir sur la figure, deux méthodes de choix de stratégies coexistent, le random et le PTFT.
 \newline
-Les gain obtenus par les joueurs du PTFT sont plus élevés que ceux obtenus par les joueurs du Random.
+Les gains obtenus par les joueurs du PTFT sont plus élevés que ceux obtenus par les joueurs du Random.
 \newline
 Ceci s'explique par le nombre de traîtres par rapport au nombre de coopérateurs qui est plus élevé pour les utilisateurs du PTFT(figure du haut)
 
 
-\section{Coalition Statique (CS):}
-****************************************
+\section{Coalition Fixe (CF):}
+\begin{center}
+\includegraphics[width=130mm,height=105mm]{coalitionfixe.jpg}
+
+\begin{figure}[htbp]
+\caption{Cette figure représente l'espace de simulation à l'initialisation de la partie dans lequel des leaders sont tirés au sort et des agents rejoignent leur coalition..}
+\end{figure}
+\end{center}
+
+\begin{center}
+\includegraphics[width=140mm,height=70mm]{MoyennePayOffCoalitionFixe.jpg}
+\begin{figure}[htbp]
+\caption{Gains leaders par rapport aux indépendants et aux membres de la coalition.}
+\end{figure}
+\end{center}
+
+
 Cette figure vient de la simulation de stratégie fixe , dans laquelle les coalitions sont initialisées au départ 
 et les agents ne changent pas de coalition durant la partie.
 \newline
@@ -468,6 +529,11 @@ On voit que le gain des leaders est nettement plus élevé car ils récoltent une t
 \newline
 Les membres de la coalition ont une moyenne de gain plus élevé que les joueurs indépendants car ils trahissent avec 
 les agents faisant partie de leur coalition, ce qui leur permet d'obtenir le plus grand gain possible,6.
+
+
+
+
+
 \section{Coalition Dynamique (CD):}
 \begin{center}
 \includegraphics[width=105mm,height=105mm]{Espace_Coalition.jpg}
@@ -476,11 +542,11 @@ les agents faisant partie de leur coalition, ce qui leur permet d'obtenir le plu
 \caption{Simulation coalition Dynamique.}
 \end{figure}
 \end{center}
-Dans cette espace, un deuxième paramètre entre en compte: les coalitions .
+Dans cet espace, un deuxième paramètre entre en compte: les coalitions .
 \newline
 Cette coalition influe sur la couleur des cellules sur lesquelles sont disposés les agents.
 \newline
-Les agents faisant partis d'une même coalition seront donc sur une cellule de la même couleur. et les les agents indépendants occupent les cellules blanches.
+Les agents faisant partie d'une même coalition seront donc sur une cellule de la même couleur , et les agents indépendants occupent les cellules blanches.
 \newline
 Comme tous les agents de la même coalition utilisent la même stratégie, alors ils ont tous la même couleur d'agent et la même couleur de coalition.
 
@@ -490,41 +556,63 @@ Comme tous les agents de la même coalition utilisent la même stratégie, alors il
 \caption{Courbe Moyenne Taxes leader Jeu.}
 \end{figure}
 \end{center}
-Au début de la simulation, les agents obtiennent une taxe allant de 0 a 30\% , au fil des générations, 
+Au début de la simulation, les agents obtiennent une taxe allant de 0 à 30\% , au fil des générations, 
 les agents ont tendance à partir des coalitions dans lesquels les leaders imposent de grandes taxes 
-car leur payoff est diminué et ils ont de ce fait moins de chances d'être le meilleur des voisins, 
-ce qui implique que leur compromis avec leur leader baisse et ils rejoignent une autre coalition, 
-L'agent qui était leader mais pour qui les agents de la coalition sont partis revoit donc a la baisse son taux 
-ce qui implique une baisse de la moyenne des taux imposés par les leaders au fil de la partie. 
+car leurs payoff sont diminué et ils ont de ce fait moins de chances d'être le meilleur des voisins, 
+ce qui implique que leurs compromis avec leur leader baisse et ils rejoignent une autre coalition . L'agent qui était leader mais pour qui les agents de la coalition sont partis revoit donc à la baisse son taux ce qui implique une baisse de la moyenne des taux imposés par les leaders au fil de la partie. 
 \newline
-Ainsi a la fin de la partie ayant comme initialisation de taxe 0-30\%, les leaders restants 
-sont les agents qui ont au maximum 5\% de taxe.
+Ainsi à la fin de la partie ayant comme initialisation de taxe 0-30\%, les leaders restants sont les agents qui ont au maximum 5\% de taxe.
 
 \begin{center}
 \includegraphics[width=140mm,height=80mm]{Dynamique -gain cumule+ Repartition des agents.jpg}
 \begin{figure}[htbp]
-\caption{Cumul des gains + (nbcooperateurs/nbDefecteurs/nbEnCoalition) Avec Strategie Random.}
+\caption{Cumul des gains + Repartition des agents avec stratégie random.}
 \end{figure}
 \end{center}
-Dans cette simulation, tous les agents utilisent la methode de choix de Stratégie Random, au début il n'y a presque aucun membres en coalition.
+Dans cette simulation, tous les agents utilisent la méthode de choix de Stratégie Random, au début il n'y a presque aucun membre en coalition.
 \newline
 Au fil du temps les agents rejoignent les coalitions ce qui augmente le total payoff des coalitions et réduit celui des indépendants.
 \newline
-Une augmentation du Gain cumulé est aussi a noter car plus les coalitions grandissent et plus on arrive vers le gain maximum possible du jeu c'est à dire quand il ne reste plus qu'une seule coalition: Tous les agents coopèrent donc entre eux et le gain est donc optimal.
+Une augmentation du Gain cumulé est aussi à noter car plus les coalitions grandissent et plus on arrive vers le gain maximum possible du jeu c'est-à-dire quand il ne reste plus qu'une seule coalition: Tous les agents coopèrent donc entre eux et le gain est donc optimal.
 
 
 \begin{center}
 \includegraphics[width=140mm,height=80mm]{Dynamique -gain cumule+ Repartition des agents PTFT.jpg}
 \begin{figure}[htbp]
-\caption{Cumul des gains + (nbcooperateurs/nbDefecteurs/nbEnCoalition) Avec Strategie pTFT.}
+\caption{Cumul des gains + Repartition des agents avec Strategie pTFT.}
 \end{figure}
 \end{center}
-Dans cette simulation la moitié des agents utilisent le RANDOM et l'autre moitié le PTFT, on regarde que tous les agents trahissent au fil du temps,  même ceux qui étaient programmés pour faire du random ceci s'explique car le PTFT pousse les agents à utiliser la défection car c'est ce qui rapporte le plus  et donc les utilisateurs du random rejoignent la coalition de ces utilisateurs du PTFT qui leur dicte la stratégie à adopter.
+Dans cette simulation la moitié des agents utilisent le Random et l'autre moitié le PTFT.
+On observe que tous les agents trahissent au fil du temps, même ceux qui étaient programmés pour faire du random ceci s'explique car le PTFT pousse les agents à utiliser la défection car c'est ce qui rapporte le plus et donc les utilisateurs du random rejoignent la coalition de ces utilisateurs du PTFT qui leur dictent la stratégie à adopter. 
+Ce système est en état bloqué car tous les agents trahissent et on n'observe plus de mouvement de coalition.
+
+\begin{center}
+\includegraphics[width=90mm,height=90mm]{FinalStat.jpg}
+\begin{figure}[htbp]
+\caption{Etat final de la simulation.}
+\end{figure}
+\end{center}
+
+
+Sur cette figure, nous pouvons voir qu'il ne reste plus qu'une seule stratégie sur la partie.
+C'est le critère d'arrêt de notre jeu et c'est le situation dans laquelle le gain est maximal car tous les agents coopèrent entre eux. Le leader le la coalition est extrêmement riche mais il n'impose pas une grosse taxe car c'est la raison qui fait que les membres de sa coalition sont restées dans celle ci.
 
 \chapter{Discussion et conclusion :}
+L'objectif de ce travail préliminaire visait à décrire une distribution spatiale et une population des agents , qui jouent le dilemme du prisonnier spatial avec la formation de coalition.
+\newline
+\newline
+Nous avons mis en évidence que ce problème était considéré comme un problème difficile. Pour appréhender cette difficulté nous avons simulé, évalué et analyser sur un modèle de simulation informatique multi-agent les dynamiques de formation de coalitions.
+\newline
+\newline
+Les agents peuvent jouer isolés où se joindre à une coalition dirigée par un chef , qui décide leurs stratégies de la coalition. Les agents changent de pourcentage du compromis selon la stratégie décidé par leurs chefs, chaque chef impose des taxes aux agents appartenant à sa coalition, ces règles et paramètres guident la formation de la coalition.
+\newline
+\newline
+Les stratégies utilisées par les agents sont choisis selon une méthode de choix de stratégie, soit à l'aide d'un Random, soit grâce à une méthode d'imitation des agents voisins appelée ptft, les agents utilisant le Ptft ont des résultats supérieurs à ceux utilisant le Random et les agents en coalition ont de meilleurs résultats que les agents indépendants.
 \label{figue}
 
 \nocite{*}
 \bibliographystyle{plain}
-\bibliography{martin}
+\bibliography{biblio}
+
+
 \end{document}

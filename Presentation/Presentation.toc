@@ -1,0 +1,14 @@
+\beamer@endinputifotherversion {3.24pt}
+\select@language {french}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Syst\`eme Multi-Agent}{13}{0}{2}
+\beamer@subsectionintoc {2}{1}{R\'epartition spatiale}{14}{0}{2}
+\beamer@subsectionintoc {2}{2}{Les \'etats des agents}{15}{0}{2}
+\beamer@subsectionintoc {2}{3}{R\`egles du jeu}{18}{0}{2}
+\beamer@subsectionintoc {2}{4}{Formation de coalition}{19}{0}{2}
+\beamer@subsectionintoc {2}{5}{Gestion des Strat\'egies}{22}{0}{2}
+\beamer@sectionintoc {3}{Simulation et Impl\'ementation}{25}{0}{3}
+\beamer@subsectionintoc {3}{1}{Dilemme du Prisonnier}{26}{0}{3}
+\beamer@subsectionintoc {3}{2}{Coalition fixe}{39}{0}{3}
+\beamer@subsectionintoc {3}{3}{Coalition dynamique}{43}{0}{3}
+\beamer@sectionintoc {4}{Conclusion}{57}{0}{4}

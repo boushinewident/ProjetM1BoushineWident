@@ -10,9 +10,9 @@ R.M. Axelrod.
 \newblock Basic Books, 2006.
 
 \bibitem{binmore1992fun}
-Ken Binmore.
-\newblock Fun and games, a text on game theory.
-\newblock 1992.
+K.~Binmore.
+\newblock {\em Fun and Games: A Text on Game Theory}.
+\newblock D. C. Heath and Company, Lexington, MA, 1992.
 
 \bibitem{RePEc:eee:jetheo:v:57:y:1992:i:2:p:278-305}
 Kenneth~G. Binmore and Larry Samuelson.
@@ -39,6 +39,24 @@ R{\'e}mi Dorat.
 \newblock Theses, {Universit{\'e} des Sciences et Technologie de Lille - Lille
   I}, June 2009.
 
+\bibitem{conf:jfsma:HamilaMSM09}
+Mohamed~Amine Hamila, René Mandiau, Emmanuelle Grislin-Le Strugeon, and
+  Abdel-Illah Mouaddib.
+\newblock Jeux stochastiques à somme générale pour la coordination
+  multi-agents.
+\newblock In Zahia Guessoum and Salima Hassas, editors, {\em JFSMA}, pages
+  47--56. Cepadues Editions, 2009.
+
+\bibitem{Langer:2008p1595}
+P~Langer, M~Nowak, and C~Hauert.
+\newblock Spatial invasion of cooperation.
+\newblock {\em J Theor Biol}, 250:634--641, 2008.
+
+\bibitem{Nowak1992}
+Martin~A. Nowak and Robert~M. May.
+\newblock Evolutionary games and spatial chaos.
+\newblock {\em Nature}, 359:826, 1992.
+
 \bibitem{osborne1994course}
 Martin~J Osborne and Ariel Rubinstein.
 \newblock {\em A course in game theory}.
@@ -49,6 +67,11 @@ Sarit~Kraus Rina Azoulay-Schwartz.
 \newblock {\em Negotiation on Data Allocation in Multi-Agent Environments}.
 \newblock Kluwer Academic Publishers, 2002.
 
+\bibitem{Schweitzer:2002p5030}
+F~Schweitzer, L~Behera, and H~Muehlenbein.
+\newblock Evolution of cooperation in a spatial prisoner's dilemma.
+\newblock {\em Advances in complex systems}, 5(2-3):269--299, 2002.
+
 \bibitem{smith1982evolution}
 J.M. Smith.
 \newblock {\em Evolution and the Theory of Games}.
@@ -57,5 +80,11 @@ J.M. Smith.
 \bibitem{Theodore2001Theory}
 Bernhard von~Stengel Theodore L.~Turocy.
 \newblock Game theory, 2001.
+
+\bibitem{yildizoglu2003introduction}
+M.~Yildizoglu.
+\newblock {\em Introduction {\`a} la th{\'e}orie des jeux}.
+\newblock Collection {\'E}co Sup: Manuel et exercices corrig{\'e}s. Dunod,
+  2003.
 
 \end{thebibliography}

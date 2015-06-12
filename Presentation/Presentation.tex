@@ -1,0 +1,373 @@
+
+\documentclass{beamer}
+%\documentclass[handout]{beamer} aurait supprimé les ``overlays''
+
+\usetheme{Warsaw}% le thème choisi pour ma présentation
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}%pour les includegraphics
+\usepackage{array}% pour des tableaux particuliers. Nécessaire pour les révéler colonne par colonne
+
+\setbeamercovered{transparent}%l'autre option : invisible, cache totalement le texte pas encore découvert (ie, n'utilise pas le ``grisé'').
+
+\colorlet{orange}{red!70!yellow}% mes petites couleurs que j'aime bien
+\colorlet{mauve}{blue!70!red}
+\colorlet{brouge}{red!70!blue}
+
+\addtobeamertemplate{footline}{\insertframenumber/\inserttotalframenumber}
+%pour ajouter un numéro de page en bas.
+% une autre solution : \useoutertheme{shadow}
+
+
+\title[Modélisation et simulation de la formation de
+coalitions]{Modélisation et simulation de la formation de
+coalitions par la théorie des jeux}
+%l'argument entre [] est une version courte du titre, qu'on met en bas des transparents.
+
+\author{Saloua Boushine - Florian Wident}
+\institute{Encadré par : Sébastien Verel - Chistopher Jankee}
+
+\date{\today}
+\logo{\includegraphics[width=3cm]{logo.jpg}}% je définis le logo qui sera mis sur tous les transparents
+
+\AtBeginSection[] % pour mettre la table des matières 
+%                 % au début de chaque section
+{ \begin{frame}<beamer> 
+\frametitle{Plan de l'exposé} 
+\tableofcontents[currentsection] 
+\end{frame} }
+
+\begin{document}
+\begin{frame}\titlepage
+\end{frame}
+\begin{frame}
+\frametitle{Présentation du projet :}
+\tableofcontents% comme en latex normal, met la table des matières
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{La théorie des jeux}
+\begin{itemize}
+\item Qu'est ce que la théorie de jeux?
+\pause \item Théorie des jeux dans le vie réelle (Economie , Informatique, Militaire)
+\pause \item Un peu d'histoire (John Von Neumann ,  Oskar Morgenstein)
+\pause \item Dilemme Du prisonnier
+\end{itemize}
+\pause
+\begin{table}[htbp]
+\begin{center}
+\begin{minipage}[t]{.4\linewidth}
+\setlength{\doublerulesep}{\arrayrulewidth}
+\begin{tabular}{|l||l|l|}
+\hline
+\rotatebox{45}{I  /  II\,} & C & D \\
+\hline\hline
+C & \rotatebox{45}{ 10 / 10 } &\rotatebox{45}{ 0 / 20 }\\
+\hline
+D & \rotatebox{45}{ 20 / 0 } & \rotatebox{45}{ 1 / 1 }\\
+\hline
+\end{tabular}
+\end{minipage}
+\end{center}
+\end{table}
+
+
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{La théorie des jeux évolutionnaires}
+\framesubtitle{EGT - Evolutionary Game Theory et Mémétique}
+\begin{block}{Sun Tzu}
+\begin{quote}
+« Le général qui gagne une bataille a médité, calculé, avant de combattre. Le général qui perd une bataille a fait moins de calculs. Donc, beaucoup de stratégie mène à la victoire, peu de stratégie à la défaite : que dire du hasard total ! »\end{quote}
+\end{block}
+\begin{itemize}
+\pause \item Qu'est ce que la théorie de jeux Évolutionnaire?
+\pause \item Stratégie évolutionnaire stable (SES)
+\pause \item Mémétique
+
+\end{itemize}
+\end{frame}
+\section{Système Multi-Agent}
+\subsection{Répartition spatiale}
+\begin{frame}
+\frametitle{Répartition spatiale}
+
+
+\begin{columns}[t] 
+\column[T]{3cm} 
+\includegraphics[width=3cm]{Voisinage.jpg} \end{columns}
+
+\begin{figure}[htbp]
+\caption{Voisinage de von Neumann .}
+\label{fig:spatial}
+\end{figure}
+\end{frame}
+
+\subsection{Les états des agents}
+\begin{frame}
+\frametitle{Les états des agents}
+\begin{itemize}
+ \item Indépendant
+\pause \item Coalition Part
+\pause \item Leader
+\end{itemize}
+\end{frame}
+
+\subsection{Règles du jeu}
+\begin{frame}
+
+
+\frametitle{Les Règles du jeu}
+\begin{table}[htbp]
+\begin{center}
+\begin{minipage}[t]{.4\linewidth}
+\setlength{\doublerulesep}{\arrayrulewidth}
+\begin{tabular}{|l||l|l|}
+\hline
+\rotatebox{45}{Ai / Aj\,} & C & D \\
+\hline\hline
+C & R,R & S,T\\
+\hline
+D & T,S & P,P \\
+\hline
+\end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.4\linewidth}
+\setlength{\doublerulesep}{\arrayrulewidth}
+\begin{tabular}{|l||l|l|}
+\hline
+\rotatebox{45}{Ai / Aj\,} & C & D \\
+\hline\hline
+C & 3,3 & 0,5\\
+\hline
+D & 5,0 & 1,1 \\
+\hline
+\end{tabular}
+\end{minipage}
+\end{center}
+\end{table}
+\begin{figure}[htbp]
+\caption{Matrice 2-joueurs et Matrice dilemme du prisonnier classique appliquée dans notre simulation.}
+\label{fig:dessin}
+\end{figure}
+\end{frame}
+
+\subsection{Formation de coalition}
+\begin{frame}
+\frametitle{Formation de coalition}
+\begin{columns}[t] 
+
+\column{7cm}
+\begin{itemize}
+\item Choix de stratégie et transmission de stratégie par les leaders
+\pause \item Simulation de partie : Obtention de gain
+\pause \item Réduction de gain par la taxe.
+\item Mouvement de coalition : Algorithme de Juan C.
+\end{itemize}
+\column[T]{13cm} 
+\includegraphics[width=6cm]{AlgoCoal.jpg} 
+\end{columns}
+\end{frame}
+
+
+
+\subsection{Gestion des Stratégies}
+\begin{frame}
+\frametitle{probabiliste Tit-for-tat(PTFT)}
+\begin{itemize}
+\item Méthode de choix de stratégie.
+\pause \item Basée sur l'imitation des voisins.
+\pause \item Selection de la stratégie la plus utilisée.
+\item Autre méthode : Random : Méthode de choix de stratégie aléatoire.
+\end{itemize}
+\end{frame}
+
+\section{Simulation et Implémentation}
+\subsection{Dilemme du Prisonnier}
+
+\begin{frame}
+\frametitle{Dilemme du Prisonnier}
+\begin{columns}[t] 
+
+\column{7cm}
+\begin{itemize}
+\item Choix de stratégie et transmission de stratégie par les leaders
+\pause \item Représentation des agents par des avions.
+\pause \item Voisinage de NR = 1 : 4 voisins.
+\item Stratégie utilisée représentée par la couleur des agents.
+\end{itemize}
+\column[T]{6cm} 
+\includegraphics[width=6cm]{Espace_Dilemme.jpg} \end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Dilemme du Prisonnier}
+\begin{columns}[t] 
+
+
+\column[T]{6cm} 
+\includegraphics[width=6cm]{DilemmeMoyennePayOff.jpg}
+\begin{figure}[htbp]
+\caption{moyenne des payoff des agents qui trahissent et de ceux qui coopèrent .}
+\label{fig:spatial}
+\end{figure}
+
+ \column{7cm}
+\begin{itemize}
+\item  Courbe obtenue en utilisant la méthode random.
+\pause \item Gains plus élevés pour les traîtres.
+\pause \item 1 chance sur 2 de rencontrer  un coopérateur et un traître pour chaque voisin.
+\pause \item MoyenneDeGainParTour = nbVoisins*((probabiliteCooperation\?GainSiCoopere)+ 			(probabiliteTraite *GainSiTraitre)) .
+\pause \item Coopérateur : $4 * (0.5 * 3) = 6 $ .
+\pause \item Traître : $4 * ((0.5 * 5) + (0.5 * 1) = 12$
+\end{itemize}
+ \end{columns}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Dilemme du Prisonnier}
+\begin{columns}[t] 
+\column[T]{6cm} 
+\includegraphics[width=6cm]{Dilemme pTFT Random.jpg}
+\begin{figure}[htbp]
+\caption{Analyse des stratégies pTFT et random .}
+\label{fig:spatial}
+\end{figure}
+
+
+ \column{7cm}
+\begin{itemize}
+\item  Moitié pTFT, moitié Random ( en haut, rouge et vert).
+\pause \item plus de traîtres que de coopérateurs .( noir et rose).
+\pause \item différence due à la stratégie PTFT ( bleu et marron).
+\pause \item Payoff du pTFT plus élevé que celui du Random.
+\end{itemize}
+ \end{columns}
+
+
+\end{frame}
+
+
+\subsection{Coalition fixe}
+\begin{frame}
+\frametitle{Coalition fixe}
+\begin{columns}[t] 
+\column[T]{6cm} 
+\includegraphics[width=6cm]{coalitionfixe.jpg} 
+ \column{7cm}
+\begin{itemize}
+\item  Représentation des coalitions par la couleur de fond de la cellule.
+\pause \item Initialisation du nombre de  leaders  et de la taxe selon un slider ( a gauche de l'image).
+\end{itemize}
+
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Coalition fixe}
+\begin{columns}[t] 
+\column[T]{6cm} 
+\includegraphics[width=6cm]{MoyennePayOffCoalitionFixe.jpg}
+\begin{figure}[htbp]
+\caption{Gains leaders par rapport aux indépendants et aux membres de la coalition Ajouter a coté de l'image  .}
+\label{fig:spatial}
+\end{figure}
+
+ \column{7cm}
+\begin{itemize}
+\item  Gain leader plus élevé $=>$ taxe imposée.
+\pause \item Gain coalition part $=>$ gain indépendant $=>$ coopération interne.
+\end{itemize}
+
+ \end{columns}
+\end{frame}
+
+\subsection{Coalition dynamique}
+\begin{frame}
+\frametitle{Coalition dynamique}
+\begin{columns}[t] 
+\column[T]{6cm} 
+\includegraphics[width=6cm]{Espace_Coalition.jpg} 
+
+
+\end{columns}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Coalition dynamique}
+\begin{columns}[t] 
+\column[T]{6cm} 
+\includegraphics[width=6cm]{moyenneTaxeLeader.jpg}
+
+
+ \column{7cm}
+\begin{itemize}
+\item La moyenne diminue $=>$ Recalcule des taxes imposées par les leaders.
+\pause \item Agents restants à la fin : petite taxe de l'ordre de 1/10 de l'initialisation.
+\end{itemize}
+
+
+ \end{columns}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Coalition dynamique}
+\begin{columns}[t] 
+\column[T]{6cm} 
+\includegraphics[width=6cm]{Dynamique -gain cumule+ Repartition des agents.jpg} 
+\begin{figure}[htbp]
+\caption{Cumul des gains et répartition des agents avec le RANDOM.}
+\label{fig:spatial}
+\end{figure}
+
+ \column{7cm}
+\begin{itemize}
+\item Méthode random utilisée par tous les agents ( courbe verte).
+\pause \item Agents restants à la fin : petite taxe de l'ordre de 1/10 de l'initialisation.
+\pause \item Le nombre d'agents en coalition augmente au fil du temps.
+\pause \item donc le cumul des gains en coalition augmente  .
+\pause \item Avec le temps : Grandes coalitions.
+\pause \item Approche du gain optimal $=>$ Coopération entre tous les agents.
+\end{itemize}
+
+
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Coalition dynamique}
+\begin{columns}[t] 
+\column[T]{6cm} 
+\includegraphics[width=6cm]{Dynamique -gain cumule+ Repartition des agents PTFT.jpg} 
+\begin{figure}[htbp]
+\caption{Cumul des gains et répartition des agents avec le PTFT/Random.}
+\label{fig:spatial}
+\end{figure}
+ \column{7cm}
+\begin{itemize}
+\item Moitié Random Moitié pTFT..
+\pause \item Tous les agents qui utilisent le pTFT Trahissent les membres ne faisant pas partie de leur coalitions.
+\pause \item Le nombre d'agents en coalition augmente au fil du temps.
+\pause \item Les agents qui utilisent le random Trahissent aussi $=>$ pTFT Leaders de coalition qui dictent la stratégie.
+\pause \item Stagnation du système : plus de mouvement de coalition.
+\end{itemize}
+
+\end{columns}
+\end{frame}
+
+\section{Conclusion}
+\begin{frame}
+\end{frame}
+
+
+\end{document}
